@@ -1,6 +1,6 @@
 import { getBots } from "@/lib/dataset";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { BotsSearchableList } from "@/components/BotsSearchableList";
+import { BotsSearchableList } from "@/components/SearchableLists/BotsSearchableList";
 
 export const metadata = {
   title: "Bots - ARCDb",

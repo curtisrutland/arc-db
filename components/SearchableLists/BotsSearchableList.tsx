@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { Bot } from "@/types/dataset";
 import { SearchBar } from "@/components/SearchBar";
-import { BotCard } from "@/components/BotCard";
+import { BotCard } from "@/components/Cards/BotCard";
 import { filterItems } from "@/lib/search";
 
 interface BotsSearchableListProps {

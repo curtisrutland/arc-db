@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { Quest } from "@/types/dataset";
 import { SearchBar } from "@/components/SearchBar";
-import { QuestCard } from "@/components/QuestCard";
+import { QuestCard } from "@/components/Cards/QuestCard";
 import { filterItems } from "@/lib/search";
 
 interface QuestsSearchableListProps {

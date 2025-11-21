@@ -1,6 +1,6 @@
 import { getItems } from "@/lib/dataset";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { ItemsSearchableList } from "@/components/ItemsSearchableList";
+import { ItemsSearchableList } from "@/components/SearchableLists/ItemsSearchableList";
 
 export const metadata = {
   title: "Items - ARCDb",

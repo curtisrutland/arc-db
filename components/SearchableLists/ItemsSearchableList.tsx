@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { Item } from "@/types/dataset";
 import { SearchBar } from "@/components/SearchBar";
-import { ItemCard } from "@/components/ItemCard";
+import { ItemCard } from "@/components/Cards/ItemCard";
 import { filterItems } from "@/lib/search";
 
 interface ItemsSearchableListProps {

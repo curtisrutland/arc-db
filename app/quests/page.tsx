@@ -1,6 +1,6 @@
 import { getQuests } from "@/lib/dataset";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { QuestsSearchableList } from "@/components/QuestsSearchableList";
+import { QuestsSearchableList } from "@/components/SearchableLists/QuestsSearchableList";
 
 export const metadata = {
   title: "Quests - ARCDb",

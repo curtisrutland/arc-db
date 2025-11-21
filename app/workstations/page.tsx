@@ -1,6 +1,6 @@
 import { getWorkstations } from "@/lib/dataset";
 import { Breadcrumb } from "@/components/Breadcrumb";
-import { WorkstationsSearchableList } from "@/components/WorkstationsSearchableList";
+import { WorkstationsSearchableList } from "@/components/SearchableLists/WorkstationsSearchableList";
 
 export const metadata = {
   title: "Workstations - ARCDb",

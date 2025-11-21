@@ -1,5 +1,6 @@
 {
   "name": "arc-db",
+  "description": "An ARC Raiders game item/quest database",
   "version": "0.1.0",
   "private": true,
   "scripts": {

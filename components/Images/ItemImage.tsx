@@ -15,6 +15,17 @@ function isBlueprint(item: Item) {
   return item.id.includes("blueprint");
 }
 
+function getRarityGradient(rarity: Item["rarity"]): string {
+  const gradients = {
+    Legendary: "linear-gradient(135deg, rgba(251, 146, 60, 0.3) 0%, rgba(251, 146, 60, 0.05) 100%)",
+    Epic: "linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.05) 100%)",
+    Rare: "linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.05) 100%)",
+    Uncommon: "linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.05) 100%)",
+    Common: "linear-gradient(135deg, rgba(113, 113, 122, 0.3) 0%, rgba(113, 113, 122, 0.05) 100%)",
+  };
+  return gradients[rarity];
+}
+
 export function ItemImage({
   item,
   className,
@@ -49,7 +60,9 @@ export function ItemImage({
               backgroundSize: "cover",
               backgroundPosition: "center",
             }
-          : undefined
+          : {
+              backgroundImage: getRarityGradient(item.rarity),
+            }
       }
     >
       <Image

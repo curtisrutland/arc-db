@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Bot } from "@/types/dataset";
 import { SearchBar } from "@/components/SearchBar";
 import { BotCard } from "@/components/BotCard";
@@ -12,12 +12,16 @@ interface BotsSearchableListProps {
 export function BotsSearchableList({ bots }: BotsSearchableListProps) {
   const [filteredBots, setFilteredBots] = useState(bots);
 
+  const handleFilter = useCallback((filtered: Bot[]) => {
+    setFilteredBots(filtered);
+  }, []);
+
   return (
     <>
       <SearchBar
         items={bots}
         searchKeys={["name", "type", "threat", "description", "weakness"]}
-        onFilter={setFilteredBots}
+        onFilter={handleFilter}
         placeholder="Search bots by name, type, threat level..."
       />
 

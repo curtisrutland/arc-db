@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Workstation } from "@/types/dataset";
 import { SearchBar } from "@/components/SearchBar";
 import { WorkstationCard } from "@/components/WorkstationCard";
@@ -15,12 +15,16 @@ export function WorkstationsSearchableList({
   const [filteredWorkstations, setFilteredWorkstations] =
     useState(workstations);
 
+  const handleFilter = useCallback((filtered: Workstation[]) => {
+    setFilteredWorkstations(filtered);
+  }, []);
+
   return (
     <>
       <SearchBar
         items={workstations}
         searchKeys={["name.en", "maxLevel"]}
-        onFilter={setFilteredWorkstations}
+        onFilter={handleFilter}
         placeholder="Search workstations by name..."
       />
 

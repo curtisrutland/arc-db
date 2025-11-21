@@ -1,5 +1,5 @@
 import { Item } from "@/types/dataset";
-import { ItemImage } from "@/components/ItemImage";
+import { ItemImage } from "@/components/Images/ItemImage";
 
 interface ItemHoverCardProps {
   item: Item;

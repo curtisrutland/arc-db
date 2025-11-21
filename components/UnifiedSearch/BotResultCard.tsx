@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Bot } from "@/types/dataset";
-import { BotImage } from "../BotImage";
+import { BotImage } from "../Images/BotImage";
 
 interface BotResultCardProps {
   bot: Bot;

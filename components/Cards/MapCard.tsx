@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Map } from "@/types/dataset";
-import { MapImage } from "../MapImage";
+import { MapImage } from "../Images/MapImage";
 
 interface MapCardProps {
   map: Map;

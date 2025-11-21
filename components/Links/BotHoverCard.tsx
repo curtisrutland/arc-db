@@ -1,5 +1,5 @@
 import { Bot } from "@/types/dataset";
-import { BotImage } from "@/components/BotImage";
+import { BotImage } from "@/components/Images/BotImage";
 
 interface BotHoverCardProps {
   bot: Bot;

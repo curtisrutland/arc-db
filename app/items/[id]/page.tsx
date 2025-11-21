@@ -12,7 +12,7 @@ import { RarityBadge } from "@/components/Badge";
 import { InfoSection } from "@/components/InfoSection";
 import { InfoGrid, InfoItem } from "@/components/InfoGrid";
 import { BotLink, ItemLink, QuestLink, WorkstationLink } from "@/components/Links";
-import { ItemImage } from "@/components/ItemImage";
+import { ItemImage } from "@/components/Images/ItemImage";
 
 interface ItemPageProps {
   params: Promise<{ id: string }>;

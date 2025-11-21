@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Item } from "@/types/dataset";
-import { ItemImage } from "@/components/ItemImage";
+import { ItemImage } from "@/components/Images/ItemImage";
 
 interface ItemResultCardProps {
   item: Item;

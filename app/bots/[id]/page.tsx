@@ -6,7 +6,7 @@ import { ThreatBadge } from "@/components/Badge";
 import { InfoSection } from "@/components/InfoSection";
 import { InfoGrid, InfoItem } from "@/components/InfoGrid";
 import { ItemLink, MapLink } from "@/components/Links";
-import { BotImage } from "@/components/BotImage";
+import { BotImage } from "@/components/Images/BotImage";
 
 interface BotPageProps {
   params: Promise<{ id: string }>;

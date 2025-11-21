@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Map } from "@/types/dataset";
-import { MapImage } from "../MapImage";
+import { MapImage } from "../Images/MapImage";
 
 interface MapHoverCardProps {
   map: Map;

@@ -27,7 +27,8 @@ export function UnifiedSearchDropdown({
   searchTerm,
   allResults,
 }: UnifiedSearchDropdownProps) {
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const mobileDropdownRef = useRef<HTMLDivElement>(null);
+  const desktopDropdownRef = useRef<HTMLDivElement>(null);
 
   const totalResults =
     allResults.items.length +
@@ -55,7 +56,11 @@ export function UnifiedSearchDropdown({
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      const isMobileClick = mobileDropdownRef.current && !mobileDropdownRef.current.contains(e.target as Node);
+      const isDesktopClick = desktopDropdownRef.current && !desktopDropdownRef.current.contains(e.target as Node);
+
+      // Only close if the click is outside both dropdowns
+      if (isMobileClick && isDesktopClick) {
         onClose();
       }
     };
@@ -75,7 +80,7 @@ export function UnifiedSearchDropdown({
     <>
       {/* Mobile: Fixed full-width overlay */}
       <div
-        ref={dropdownRef}
+        ref={mobileDropdownRef}
         className="sm:hidden fixed left-0 right-0 top-[calc(100vh-100vh+theme(spacing.32))] bottom-0 bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 overflow-hidden z-50"
         style={{
           top: '66px',
@@ -180,7 +185,7 @@ export function UnifiedSearchDropdown({
 
       {/* Desktop: Regular dropdown */}
       <div
-        ref={dropdownRef}
+        ref={desktopDropdownRef}
         className="hidden sm:block absolute top-full left-0 right-0 mt-2 bg-white dark:bg-zinc-900 rounded-lg shadow-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden z-50"
       >
       {/* Header */}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { HeaderSearch } from "@/components/HeaderSearch";
-import { getItems } from "@/lib/dataset";
+import { getItems, getBots, getQuests, getWorkstations } from "@/lib/dataset";
 
 export function Header() {
   const navLinks = [
@@ -11,6 +11,9 @@ export function Header() {
   ];
 
   const items = getItems();
+  const bots = getBots();
+  const quests = getQuests();
+  const workstations = getWorkstations();
 
   return (
     <header className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
@@ -24,7 +27,12 @@ export function Header() {
           </Link>
 
           <div className="flex-1 max-w-xl">
-            <HeaderSearch items={items} />
+            <HeaderSearch
+              items={items}
+              bots={bots}
+              quests={quests}
+              workstations={workstations}
+            />
           </div>
 
           <nav className="flex items-center gap-6">

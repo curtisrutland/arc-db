@@ -8,10 +8,21 @@
       "threat": "Low",
       "description": "The largest of the rolling ARC. It stops periodically to transmit signals. Rarely attacks, usually runs away from Raiders. Breaks into many pieces as damage is taken.",
       "weakness": "Exposes his energy core when shooting his blue beam into the sky.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 200,
       "lootXp": 300,
-      "drops": ["arc_alloy", "arc_powercell", "arc_motion_core", "arc_circuitry", "surveyor_vault"]
+      "drops": [
+        "arc_alloy",
+        "arc_powercell",
+        "arc_motion_core",
+        "arc_circuitry",
+        "surveyor_vault"
+      ]
     },
     {
       "id": "bastion",
@@ -31,7 +42,13 @@
       ],
       "destroyXp": 500,
       "lootXp": 250,
-      "drops": ["arc_alloy", "arc_powercell", "arc_motion_core", "arc_circuitry", "bastion_cell"]
+      "drops": [
+        "arc_alloy",
+        "arc_powercell",
+        "arc_motion_core",
+        "arc_circuitry",
+        "bastion_cell"
+      ]
     },
     {
       "id": "bombardier",
@@ -41,10 +58,20 @@
       "threat": "Critical",
       "description": "A massive artillery unit designed for long-range bombardment. Equipped with devastating explosive capabilities and heavy armor, it can rain destruction from great distances.",
       "weakness": "Shooting at the yellow rear canister deals direct damage to it's core.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 500,
       "lootXp": 500,
-      "drops": ["arc_alloy", "advanced_arc_powercell", "bombardier_cell", "launcher_ammo"]
+      "drops": [
+        "arc_alloy",
+        "advanced_arc_powercell",
+        "bombardier_cell",
+        "launcher_ammo"
+      ]
     },
     {
       "id": "fireball",
@@ -64,7 +91,11 @@
       ],
       "destroyXp": 100,
       "lootXp": 100,
-      "drops": ["arc_alloy", "arc_powercell", "fireball_burner"]
+      "drops": [
+        "arc_alloy",
+        "arc_powercell",
+        "fireball_burner"
+      ]
     },
     {
       "id": "hornet",
@@ -74,10 +105,21 @@
       "threat": "High",
       "description": "Medium-class drone with armored rotors. It fires focused, high-speed projectiles with a brief red laser warning. Designed to shred shields and light armor.",
       "weakness": "Unarmored rear thrusters.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 150,
       "lootXp": 250,
-      "drops": ["arc_alloy", "arc_powercell", "hornet_driver", "simple_gun_parts", "medium_ammo"]
+      "drops": [
+        "arc_alloy",
+        "arc_powercell",
+        "hornet_driver",
+        "simple_gun_parts",
+        "medium_ammo"
+      ]
     },
     {
       "id": "leaper",
@@ -87,10 +129,21 @@
       "threat": "Critical",
       "description": "Massive, arachnid-like siege engine with heavy armor and gravity-defying leap ability. Can clear impossible gaps and reach high vantage points.",
       "weakness": "Fire is most effective. Additionally you can shoot into it's eye.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 500,
       "lootXp": 600,
-      "drops": ["arc_alloy", "arc_powercell", "arc_motion_core", "arc_circuitry", "leaper_pulse_unit"]
+      "drops": [
+        "arc_alloy",
+        "arc_powercell",
+        "arc_motion_core",
+        "arc_circuitry",
+        "leaper_pulse_unit"
+      ]
     },
     {
       "id": "pop",
@@ -110,7 +163,13 @@
       ],
       "destroyXp": 50,
       "lootXp": 100,
-      "drops": ["arc_alloy", "arc_powercell", "arc_thermo_lining", "crude_explosives", "pop_trigger"]
+      "drops": [
+        "arc_alloy",
+        "arc_powercell",
+        "arc_thermo_lining",
+        "crude_explosives",
+        "pop_trigger"
+      ]
     },
     {
       "id": "rocketeer",
@@ -120,7 +179,12 @@
       "threat": "Critical",
       "description": "A formidable flying ARC that dominates airspace with powerful rocket attacks and devastating area-of-effect damage. Designed to saturate areas with explosions.",
       "weakness": "Destroy two thrusters or shoot it's core, which is located underneath it.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 500,
       "lootXp": 200,
       "drops": [
@@ -142,7 +206,12 @@
       "threat": "High",
       "description": "Stationary but deadly turrets that perch on high vantage points. They scan for targets with long-range precision and lock onto players from a distance.",
       "weakness": "The yellow unarmored canister will be your main target.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 200,
       "lootXp": 300,
       "drops": [
@@ -164,10 +233,21 @@
       "threat": "Moderate",
       "description": "A swift, unarmored scout drone with three rotors. While fragile, it acts as an aerial alarm system, calling in reinforcements when it spots Raiders.",
       "weakness": "Thrusters or the underside plating.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 100,
       "lootXp": 200,
-      "drops": ["arc_alloy", "arc_powercell", "arc_synthetic_resin", "sensors", "snitch_scanner"]
+      "drops": [
+        "arc_alloy",
+        "arc_powercell",
+        "arc_synthetic_resin",
+        "sensors",
+        "snitch_scanner"
+      ]
     },
     {
       "id": "spotter",
@@ -177,10 +257,20 @@
       "threat": "High",
       "description": "Spotters are flying support drones for the Bombardier. They will point a laser at any Raider in line-of-sight so the Bombardier can accurately target them. If both Spotters are destroyed a new pair will respawn. When the Bombardier is destroyed the Spotters will fly away.",
       "weakness": "Unarmored thrusters",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 100,
       "lootXp": 200,
-      "drops": ["spotter_relay", "arc_alloy", "arc_powercell", "sensors"]
+      "drops": [
+        "spotter_relay",
+        "arc_alloy",
+        "arc_powercell",
+        "sensors"
+      ]
     },
     {
       "id": "the_queen",
@@ -190,7 +280,11 @@
       "threat": "Extreme",
       "description": "A colossal machine deployed during Harvester Events. It's the Goliath of the ARC forces with incredible durability and lethal arsenal. Requires full squad coordination.",
       "weakness": "The yellow joints on her legs. Exposes her core when firing the laser.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate"
+      ],
       "destroyXp": 1000,
       "lootXp": 1000,
       "drops": [
@@ -228,7 +322,10 @@
       ],
       "destroyXp": 50,
       "lootXp": 100,
-      "drops": ["arc_alloy", "tick_pod"]
+      "drops": [
+        "arc_alloy",
+        "tick_pod"
+      ]
     },
     {
       "id": "turret",
@@ -248,7 +345,11 @@
       ],
       "destroyXp": 100,
       "lootXp": 200,
-      "drops": ["arc_alloy", "light_ammo", "simple_gun_parts"]
+      "drops": [
+        "arc_alloy",
+        "light_ammo",
+        "simple_gun_parts"
+      ]
     },
     {
       "id": "wasp",
@@ -258,10 +359,20 @@
       "threat": "Moderate",
       "description": "Flying, drone-like robots equipped with powerful machine guns. They operate in swarms, are fast, agile, and relentless. Their buzzing and screeching audio cues are your first warning.",
       "weakness": "Unarmored thrusters.",
-      "maps": ["dam_battlegrounds", "the_spaceport", "the_blue_gate", "buried_city"],
+      "maps": [
+        "dam_battlegrounds",
+        "the_spaceport",
+        "the_blue_gate",
+        "buried_city"
+      ],
       "destroyXp": 100,
       "lootXp": 200,
-      "drops": ["arc_alloy", "arc_powercell", "wasp_driver", "light_ammo"]
+      "drops": [
+        "arc_alloy",
+        "arc_powercell",
+        "wasp_driver",
+        "light_ammo"
+      ]
     },
     {
       "id": "matriarch",
@@ -271,7 +382,9 @@
       "threat": "Extreme",
       "description": "Big walking Spider with heavy armour and energy shield. Can shoot gas grenades. Can call in  Fireball, Wasp, Leaper, Bastion, Bombardier and Rocketeer. Makes the queen look friendly.",
       "weakness": "Central glowing core, which becomes exposed when it attacks. Leg joints are vulnerable too, as well as the red areas on the crown.",
-      "maps": ["dam_battlegrounds"],
+      "maps": [
+        "dam_battlegrounds"
+      ],
       "destroyXp": 0,
       "lootXp": 0,
       "drops": [
@@ -293,10 +406,19 @@
       "threat": "High",
       "description": "Close quarter enemy with high damage. Shoots 4 AOE bursts. Only found on Stella Montis.",
       "weakness": "Primary weakness is the 'eye-bar' at it's head. You may see the orange core between it's armour plates, which you can shoot too.",
-      "maps": ["stella_montis_lower", "stella_montis_upper"],
+      "maps": [
+        "stella_montis_lower",
+        "stella_montis_upper"
+      ],
       "destroyXp": 0,
       "lootXp": 0,
-      "drops": ["arc_alloy", "arc_gyroscope", "shotgun_ammo", "simple_gun_parts", "arc_powercell"]
+      "drops": [
+        "arc_alloy",
+        "arc_gyroscope",
+        "shotgun_ammo",
+        "simple_gun_parts",
+        "arc_powercell"
+      ]
     }
   ],
   "items": [
@@ -981,7 +1103,13 @@
           "value": "30%"
         }
       },
-      "compatibleWith": ["Arpeggio", "Rattler", "Kettle", "Il Toro", "Stitcher"],
+      "compatibleWith": [
+        "Arpeggio",
+        "Rattler",
+        "Kettle",
+        "Il Toro",
+        "Stitcher"
+      ],
       "updatedAt": "11/05/2025",
       "image": "items/angled_grip_ii.png"
     },
@@ -3577,52 +3705,6 @@
       "image": "items/assorted_seeds.png"
     },
     {
-      "id": "backpack_black_hiker_color",
-      "name": {
-        "en": "Backpack (Black Hiker Color)",
-        "de": "Rucksack (Schwarze Wanderer-Farbe)",
-        "fr": "Sac à dos (couleur randonneur noir)",
-        "es": "Mochila (color excursionista negro)",
-        "pt": "Mochila (cor caminhante preto)",
-        "pl": "Plecak (czarny kolor wędrowca)",
-        "no": "Ryggsekk (svart vandrer-farge)",
-        "da": "Rygsæk (sort vandrer-farve)",
-        "it": "Zaino (colore escursionista nero)",
-        "ru": "Рюкзак (цвет черного туриста)",
-        "ja": "バックパック（ブラックハイカーカラー）",
-        "zh-TW": "背包（黑色登山客配色）",
-        "uk": "Рюкзак (колір чорного туриста)",
-        "zh-CN": "背包（黑色徒步者配色）",
-        "kr": "배낭 (블랙 하이커 컬러)",
-        "tr": "Sırt Çantası (Siyah Yürüyüşçü Rengi)",
-        "hr": "Ruksak (Crna Planinarska Boja)",
-        "sr": "Ranac (Crna Planinarska Boja)"
-      },
-      "description": {
-        "en": "Cosmetic Backpack",
-        "de": "Kosmetischer Rucksack",
-        "fr": "Sac à dos cosmétique",
-        "es": "Mochila cosmética",
-        "pt": "Mochila cosmética",
-        "pl": "Plecak kosmetyczny",
-        "no": "Kosmetisk ryggsekk",
-        "da": "Kosmetisk rygsæk",
-        "it": "Zaino cosmetico",
-        "ru": "Косметический рюкзак",
-        "ja": "コスメティックバックパック",
-        "zh-TW": "裝飾背包",
-        "uk": "Косметичний рюкзак",
-        "zh-CN": "装饰背包",
-        "kr": "코스메틱 배낭",
-        "tr": "Kozmetik Sırt Çantası",
-        "hr": "Kozmetički Ruksak",
-        "sr": "Kozmetički Ranac"
-      },
-      "type": "Cosmetic",
-      "rarity": "Common",
-      "updatedAt": "10/30/2025"
-    },
-    {
       "id": "banana",
       "name": {
         "en": "Banana",
@@ -3788,7 +3870,10 @@
       "recipe": {
         "fabric": 5
       },
-      "craftBench": ["workbench", "med_station"],
+      "craftBench": [
+        "workbench",
+        "med_station"
+      ],
       "image": "items/bandage.png"
     },
     {
@@ -5626,53 +5711,6 @@
       "image": "items/blue_light_stick_blueprint.png"
     },
     {
-      "id": "blue_radio_renegade_color",
-      "name": {
-        "en": "Blue (Radio Renegade Color)",
-        "de": "Blau (Radio Renegade-Farbe)",
-        "fr": "Bleu (couleur Radio Renégat)",
-        "es": "Azul (color Radio Renegade)",
-        "pt": "Azul (cor Radio Renegade)",
-        "pl": "Niebieski (kolor Radio Renegade)",
-        "no": "Blå (Radio Renegade-farge)",
-        "da": "Blå (Radio Renegade-farve)",
-        "it": "Blu (colore Radio Renegade)",
-        "ja": "ブルー (Radio Renegadeカラー)",
-        "kr": "블루 (Radio Renegade 색상)",
-        "zh-CN": "蓝色（Radio Renegade配色）",
-        "zh-TW": "藍色（Radio Renegade配色）",
-        "ru": "Синий (цвет Radio Renegade)",
-        "tr": "Mavi (Radio Renegade Rengi)",
-        "uk": "Синій (колір Radio Renegade)",
-        "sr": "Plava (Radio Renegade boja)",
-        "hr": "Plava (Radio Renegade boja)"
-      },
-      "description": {
-        "en": "A new cosmetic variant will be added to your collection.",
-        "de": "Eine neue kosmetische Variante wird deiner Sammlung hinzugefügt.",
-        "fr": "Un nouveau style cosmétique sera ajouté à votre collection.",
-        "es": "Se añadirá una nueva variante estética a tu colección.",
-        "pt": "Uma nova variante cosmética será adicionada à sua coleção.",
-        "pl": "Nowy wariant kosmetyczny zostanie dodany do twojej kolekcji.",
-        "no": "En ny kosmetisk variant vil bli lagt til samlingen din.",
-        "da": "En ny kosmetisk variant vil blive tilføjet til din samling.",
-        "it": "Una nuova variante estetica verrà aggiunta alla tua collezione.",
-        "ja": "新しいコスメティックバリアントがコレクションに追加されます。",
-        "kr": "새로운 코스메틱 변형이 컬렉션에 추가됩니다.",
-        "zh-CN": "新的外观变体将添加到你的收藏中。",
-        "zh-TW": "新的外觀變體將新增至你的收藏中。",
-        "ru": "Новый косметический вариант будет добавлен в вашу коллекцию.",
-        "tr": "Koleksiyonunuza yeni bir kozmetik varyant eklenecek.",
-        "uk": "Новий косметичний варіант буде додано до вашої колекції.",
-        "sr": "Nova kozmetička varijanta biće dodata u vašu kolekciju.",
-        "hr": "Nova kozmetička varijanta bit će dodana u vašu kolekciju."
-      },
-      "type": "Cosmetic",
-      "rarity": "Common",
-      "updatedAt": "11/10/2025",
-      "image": "items/blue_radio_renegade_color.png"
-    },
-    {
       "id": "bombardier_cell",
       "name": {
         "en": "Bombardier Cell",
@@ -6842,53 +6880,6 @@
       "image": "items/canister.png"
     },
     {
-      "id": "cans_backpack_attachment",
-      "name": {
-        "en": "Cans Backpack Attachment",
-        "de": "Dosen-Rucksackanhänger",
-        "fr": "Accessoire de sac à dos canettes",
-        "es": "Accesorio de mochila de latas",
-        "pt": "Acessório de mochila de latas",
-        "pl": "Dodatek do plecaka - puszki",
-        "no": "Bokser ryggsekk-tilbehør",
-        "da": "Dåser rygsæk-tilbehør",
-        "it": "Accessorio zaino lattine",
-        "ru": "Навесные банки для рюкзака",
-        "ja": "缶バックパックアタッチメント",
-        "zh-TW": "罐頭背包掛件",
-        "uk": "Навісні банки для рюкзака",
-        "zh-CN": "罐头背包挂件",
-        "kr": "캔 배낭 부착물",
-        "tr": "Konserve Sırt Çantası Eki",
-        "hr": "Dodatak za Ruksak s Limenkama",
-        "sr": "Dodatak za Ranac sa Limenkama"
-      },
-      "description": {
-        "en": "Cosmetic Backpack Attachment",
-        "de": "Kosmetischer Rucksackanhänger",
-        "fr": "Accessoire de sac à dos cosmétique",
-        "es": "Accesorio de mochila cosmético",
-        "pt": "Acessório de mochila cosmético",
-        "pl": "Kosmetyczny dodatek do plecaka",
-        "no": "Kosmetisk ryggsekk-tilbehør",
-        "da": "Kosmetisk rygsæk-tilbehør",
-        "it": "Accessorio zaino cosmetico",
-        "ru": "Косметическое навесное украшение для рюкзака",
-        "ja": "コスメティックバックパックアタッチメント",
-        "zh-TW": "裝飾背包掛件",
-        "uk": "Косметичне навісне прикрашення для рюкзака",
-        "zh-CN": "装饰背包挂件",
-        "kr": "코스메틱 배낭 부착물",
-        "tr": "Kozmetik Sırt Çantası Eki",
-        "hr": "Kozmetički Dodatak za Ruksak",
-        "sr": "Kozmetički Dodatak za Ranac"
-      },
-      "type": "Cosmetic",
-      "rarity": "Common",
-      "updatedAt": "11/10/2025",
-      "image": "items/cans.png"
-    },
-    {
       "id": "cat_bed",
       "name": {
         "en": "Cat Bed",
@@ -6986,53 +6977,6 @@
       "rarity": "Common",
       "updatedAt": "11/09/2025",
       "image": "items/celestes_journal.png"
-    },
-    {
-      "id": "cheer",
-      "name": {
-        "en": "Cheer",
-        "de": "Jubel",
-        "fr": "Acclamation",
-        "es": "Ánimo",
-        "pt": "Comemoração",
-        "pl": "Doping",
-        "no": "Heiarop",
-        "da": "Tilråb",
-        "it": "Incitamento",
-        "ja": "応援",
-        "kr": "응원",
-        "zh-CN": "欢呼",
-        "zh-TW": "歡呼",
-        "ru": "Приветствие",
-        "tr": "Tezahürat",
-        "uk": "Вітання",
-        "sr": "Bodрenje",
-        "hr": "Bodрenje"
-      },
-      "description": {
-        "en": "A new cosmetic will be added to your collection.",
-        "de": "Ein neues Kosmetikitem wird deiner Sammlung hinzugefügt.",
-        "fr": "Un nouveau cosmétique sera ajouté à votre collection.",
-        "es": "Se añadirá un nuevo cosmético a tu colección.",
-        "pt": "Um novo cosmético será adicionado à sua coleção.",
-        "pl": "Nowy przedmiot kosmetyczny zostanie dodany do twojej kolekcji.",
-        "no": "Et nytt kosmetisk gjenstand vil bli lagt til samlingen din.",
-        "da": "Et nyt kosmetisk genstand vil blive tilføjet til din samling.",
-        "it": "Un nuovo cosmetico verrà aggiunto alla tua collezione.",
-        "ja": "新しいコスメティックがコレクションに追加されます。",
-        "kr": "새로운 코스메틱이 컬렉션에 추가됩니다.",
-        "zh-CN": "一个新的装饰品将被添加到你的收藏中。",
-        "zh-TW": "一個新的裝飾品將被添加到你的收藏中。",
-        "ru": "Новый косметический предмет будет добавлен в вашу коллекцию.",
-        "tr": "Koleksiyonunuza yeni bir kozmetik eklenecek.",
-        "uk": "Новий косметичний предмет буде додано до вашої колекції.",
-        "sr": "Novi kozmetički predmet biće dodat u vašu kolekciju.",
-        "hr": "Novi kozmetički predmet bit će dodan u vašu kolekciju."
-      },
-      "type": "Cosmetic",
-      "rarity": "Common",
-      "updatedAt": "11/16/2025",
-      "image": "items/cheer.png"
     },
     {
       "id": "chemicals",
@@ -7901,7 +7845,13 @@
         "mechanical_components": 1,
         "wires": 1
       },
-      "compatibleWith": ["Arpeggio", "Rattler", "Kettle", "Burletta", "Stitcher"],
+      "compatibleWith": [
+        "Arpeggio",
+        "Rattler",
+        "Kettle",
+        "Burletta",
+        "Stitcher"
+      ],
       "updatedAt": "11/03/2025",
       "recipe": {
         "mechanical_components": 2,
@@ -10236,7 +10186,10 @@
         "sr": "Kompatibilno sa: Equalizer, Jupiter"
       },
       "type": "Ammunition",
-      "compatibleWith": ["Equalizer", "Jupiter"],
+      "compatibleWith": [
+        "Equalizer",
+        "Jupiter"
+      ],
       "value": 5,
       "weightKg": 0.3,
       "stackSize": 5,
@@ -10966,7 +10919,13 @@
       "type": "Modification",
       "rarity": "Common",
       "value": 640,
-      "compatibleWith": ["Hairpin", "Kettle", "Stitcher", "Burletta", "Bobcat"],
+      "compatibleWith": [
+        "Hairpin",
+        "Kettle",
+        "Stitcher",
+        "Burletta",
+        "Bobcat"
+      ],
       "recyclesInto": {
         "plastic_parts": 6
       },
@@ -12176,7 +12135,10 @@
         "metal_parts": 5,
         "rubber_parts": 2
       },
-      "craftBench": ["workbench", "weapon_bench"],
+      "craftBench": [
+        "workbench",
+        "weapon_bench"
+      ],
       "image": "items/ferro.png"
     },
     {
@@ -14500,7 +14462,10 @@
       "salvagesInto": {
         "metal_parts": 2
       },
-      "craftBench": ["workbench", "weapon_bench"],
+      "craftBench": [
+        "workbench",
+        "weapon_bench"
+      ],
       "image": "items/hairpin_i.png"
     },
     {
@@ -15293,7 +15258,11 @@
         "sr": "Kompatibilno sa: Ferro, Anvil, Bettina"
       },
       "type": "Ammunition",
-      "compatibleWith": ["Anvil", "Ferro", "Bettina"],
+      "compatibleWith": [
+        "Anvil",
+        "Ferro",
+        "Bettina"
+      ],
       "updatedAt": "11/03/2025",
       "value": 12,
       "weightKg": 0.05,
@@ -18310,52 +18279,6 @@
       "image": "items/jolt_mine.png"
     },
     {
-      "id": "junior_outfit",
-      "name": {
-        "en": "Junior Outfit",
-        "de": "Junior-Outfit",
-        "fr": "Tenue junior",
-        "es": "Atuendo junior",
-        "pt": "Roupa júnior",
-        "pl": "Strój juniora",
-        "no": "Junior-antrekk",
-        "da": "Junior-outfit",
-        "it": "Completo junior",
-        "ru": "Костюм юниора",
-        "ja": "ジュニア服",
-        "zh-TW": "少年服裝",
-        "uk": "Костюм юніора",
-        "zh-CN": "少年服装",
-        "kr": "주니어 의상",
-        "tr": "Genç Kıyafeti",
-        "hr": "Junior Odijelo",
-        "sr": "Junior Odelo"
-      },
-      "description": {
-        "en": "Cosmetic Outfit",
-        "de": "Kosmetisches Outfit",
-        "fr": "Tenue cosmétique",
-        "es": "Atuendo cosmético",
-        "pt": "Roupa cosmética",
-        "pl": "Strój kosmetyczny",
-        "no": "Kosmetisk antrekk",
-        "da": "Kosmetisk outfit",
-        "it": "Completo cosmetico",
-        "ru": "Косметический костюм",
-        "ja": "コスメティック服",
-        "zh-TW": "裝飾服裝",
-        "uk": "Косметичний костюм",
-        "zh-CN": "装饰服装",
-        "kr": "코스메틱 의상",
-        "tr": "Kozmetik Kıyafet",
-        "hr": "Kozmetičko Odijelo",
-        "sr": "Kozmetičko Odelo"
-      },
-      "type": "Cosmetic",
-      "updatedAt": "10/30/2025",
-      "rarity": "Common"
-    },
-    {
       "id": "jupiter",
       "name": {
         "en": "Jupiter",
@@ -18639,7 +18562,10 @@
         "metal_parts": 6,
         "rubber_parts": 8
       },
-      "craftBench": ["workbench", "weapon_bench"],
+      "craftBench": [
+        "workbench",
+        "weapon_bench"
+      ],
       "weightKg": 7,
       "effects": {
         "Durability": {
@@ -18973,7 +18899,10 @@
           "tr": "Yükseltme Değiştiricileri",
           "hr": "Modifikatori nadogradnje",
           "sr": "Modifikatori nadogradnje",
-          "value": ["50% Increased Bullet Velocity", "26% Reduced Reload Time"]
+          "value": [
+            "50% Increased Bullet Velocity",
+            "26% Reduced Reload Time"
+          ]
         }
       },
       "updatedAt": "10/31/2025",
@@ -19841,7 +19770,13 @@
       },
       "type": "Ammunition",
       "rarity": "Common",
-      "compatibleWith": ["Kettle", "Burletta", "Hairpin", "Bobcat", "Stitcher"],
+      "compatibleWith": [
+        "Kettle",
+        "Burletta",
+        "Hairpin",
+        "Bobcat",
+        "Stitcher"
+      ],
       "value": 0.76,
       "weightKg": 0.00323,
       "stackSize": 100,
@@ -20114,7 +20049,10 @@
         "chemicals": 3,
         "plastic_parts": 2
       },
-      "craftBench": ["workbench", "explosives_bench"],
+      "craftBench": [
+        "workbench",
+        "explosives_bench"
+      ],
       "image": "items/light_impact_grenade.png"
     },
     {
@@ -20236,7 +20174,10 @@
         "arc_alloy": 2,
         "plastic_parts": 4
       },
-      "craftBench": ["workbench", "equipment_bench"],
+      "craftBench": [
+        "workbench",
+        "equipment_bench"
+      ],
       "image": "items/light_shield.png"
     },
     {
@@ -20672,7 +20613,10 @@
         "plastic_parts": 6,
         "rubber_parts": 6
       },
-      "craftBench": ["equipment_bench", "workbench"],
+      "craftBench": [
+        "equipment_bench",
+        "workbench"
+      ],
       "image": "items/looting_mk1.png"
     },
     {
@@ -21685,7 +21629,13 @@
         "sr": "Kompatibilno sa: Rattler, Tempest, Arpeggio, Renegade, Torrente"
       },
       "type": "Ammunition",
-      "compatibleWith": ["Arpeggio", "Rattler", "Tempest", "Renegade", "Torrente"],
+      "compatibleWith": [
+        "Arpeggio",
+        "Rattler",
+        "Tempest",
+        "Renegade",
+        "Torrente"
+      ],
       "value": 6,
       "weightKg": 0.025,
       "stackSize": 80,
@@ -22803,7 +22753,13 @@
           "value": "20%"
         }
       },
-      "compatibleWith": ["Arpeggio", "Rattler", "Kettle", "Burletta", "Stitcher"],
+      "compatibleWith": [
+        "Arpeggio",
+        "Rattler",
+        "Kettle",
+        "Burletta",
+        "Stitcher"
+      ],
       "updatedAt": "11/03/2025",
       "image": "items/muzzle_brake_ii.png"
     },
@@ -29037,7 +28993,10 @@
         "rubber_parts": 5,
         "arc_powercell": 1
       },
-      "craftBench": ["workbench", "med_station"],
+      "craftBench": [
+        "workbench",
+        "med_station"
+      ],
       "recyclesInto": {
         "rubber_parts": 4
       },
@@ -29248,7 +29207,10 @@
           "value": "20%"
         }
       },
-      "compatibleWith": ["Il Toro", "Vulcano"],
+      "compatibleWith": [
+        "Il Toro",
+        "Vulcano"
+      ],
       "updatedAt": "11/05/2025",
       "image": "items/shotgun_choke_ii.png"
     },
@@ -30058,7 +30020,13 @@
       "rarity": "Epic",
       "value": 7000,
       "weightKg": 0.75,
-      "compatibleWith": ["Arpeggio", "Rattler", "Ferro", "Anvil", "Torrente"],
+      "compatibleWith": [
+        "Arpeggio",
+        "Rattler",
+        "Ferro",
+        "Anvil",
+        "Torrente"
+      ],
       "effects": {
         "Reduced Noise": {
           "en": "Reduced Noise",
@@ -31244,7 +31212,13 @@
       "type": "Modification",
       "rarity": "Common",
       "value": 640,
-      "compatibleWith": ["Rattler", "Ferro", "Stitcher", "Arpeggio", "Bettina"],
+      "compatibleWith": [
+        "Rattler",
+        "Ferro",
+        "Stitcher",
+        "Arpeggio",
+        "Bettina"
+      ],
       "recipe": {
         "rubber_parts": 6,
         "duct_tape": 1
@@ -31354,7 +31328,13 @@
         "mechanical_components": 1,
         "duct_tape": 1
       },
-      "compatibleWith": ["Arpeggio", "Rattler", "Kettle", "Il Toro", "Stitcher"],
+      "compatibleWith": [
+        "Arpeggio",
+        "Rattler",
+        "Kettle",
+        "Il Toro",
+        "Stitcher"
+      ],
       "effects": {
         "Compatible with": {
           "en": "Compatible with",
@@ -32084,7 +32064,10 @@
         "metal_parts": 8,
         "rubber_parts": 4
       },
-      "craftBench": ["workbench", "weapon_bench"],
+      "craftBench": [
+        "workbench",
+        "weapon_bench"
+      ],
       "weightKg": 5,
       "effects": {
         "Durability": {
@@ -32371,7 +32354,10 @@
           "tr": "Yükseltme Değiştiricileri",
           "hr": "Modifikatori nadogradnje",
           "sr": "Modifikatori unapređenja",
-          "value": ["16.6% Reduced Horizontal Recoil", "13% Reduced Reload Time"]
+          "value": [
+            "16.6% Reduced Horizontal Recoil",
+            "13% Reduced Reload Time"
+          ]
         }
       },
       "image": "items/stitcher.png"
@@ -36855,7 +36841,13 @@
           "value": "30%"
         }
       },
-      "compatibleWith": ["Arpeggio", "Rattler", "Kettle", "Il Toro", "Stitcher"],
+      "compatibleWith": [
+        "Arpeggio",
+        "Rattler",
+        "Kettle",
+        "Il Toro",
+        "Stitcher"
+      ],
       "updatedAt": "11/05/2025",
       "image": "items/vertical_grip_ii.png"
     },
@@ -39062,8 +39054,15 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss4"],
-      "nextQuestIds": ["ss5a", "ss6", "ss7", "ss8"]
+      "previousQuestIds": [
+        "ss4"
+      ],
+      "nextQuestIds": [
+        "ss5a",
+        "ss6",
+        "ss7",
+        "ss8"
+      ]
     },
     {
       "id": "ss10x",
@@ -39187,8 +39186,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10s"],
-      "nextQuestIds": ["ss10x2"]
+      "previousQuestIds": [
+        "ss10s"
+      ],
+      "nextQuestIds": [
+        "ss10x2"
+      ]
     },
     {
       "id": "ss10",
@@ -39291,8 +39294,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss7"],
-      "nextQuestIds": ["ss10a"]
+      "previousQuestIds": [
+        "ss7"
+      ],
+      "nextQuestIds": [
+        "ss10a"
+      ]
     },
     {
       "id": "ss11",
@@ -39420,7 +39427,9 @@
           "hr": "Zakucaj krovne ploče na Rejder strukturi blizu Traperovog Proplanka"
         }
       ],
-      "otherRequirements": ["18x Raids"],
+      "otherRequirements": [
+        "18x Raids"
+      ],
       "grantedItemIds": [
         {
           "itemId": "noisemaker",
@@ -39443,7 +39452,9 @@
       ],
       "xp": 0,
       "previousQuestIds": [],
-      "nextQuestIds": ["ss11a"]
+      "nextQuestIds": [
+        "ss11a"
+      ]
     },
     {
       "id": "ss10k",
@@ -39587,8 +39598,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10g"],
-      "nextQuestIds": ["ss10s"]
+      "previousQuestIds": [
+        "ss10g"
+      ],
+      "nextQuestIds": [
+        "ss10s"
+      ]
     },
     {
       "id": "ss10x19",
@@ -39687,8 +39702,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x18"],
-      "nextQuestIds": ["ss10x20"]
+      "previousQuestIds": [
+        "ss10x18"
+      ],
+      "nextQuestIds": [
+        "ss10x20"
+      ]
     },
     {
       "id": "ss10g",
@@ -39787,8 +39806,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10f"],
-      "nextQuestIds": ["ss10k"]
+      "previousQuestIds": [
+        "ss10f"
+      ],
+      "nextQuestIds": [
+        "ss10k"
+      ]
     },
     {
       "id": "ss10r",
@@ -39912,8 +39935,14 @@
       ],
       "videoUrl": "https://www.youtube.com/watch?v=6Cb6aQWBt8U",
       "xp": 0,
-      "previousQuestIds": ["ss10q"],
-      "nextQuestIds": ["ss10t", "ss10u", "ss10v"]
+      "previousQuestIds": [
+        "ss10q"
+      ],
+      "nextQuestIds": [
+        "ss10t",
+        "ss10u",
+        "ss10v"
+      ]
     },
     {
       "id": "ss10x8",
@@ -40060,8 +40089,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x7"],
-      "nextQuestIds": ["ss10x9"]
+      "previousQuestIds": [
+        "ss10x7"
+      ],
+      "nextQuestIds": [
+        "ss10x9"
+      ]
     },
     {
       "id": "ss10y",
@@ -40181,7 +40214,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10s"],
+      "previousQuestIds": [
+        "ss10s"
+      ],
       "nextQuestIds": []
     },
     {
@@ -40325,7 +40360,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x19"],
+      "previousQuestIds": [
+        "ss10x19"
+      ],
       "nextQuestIds": []
     },
     {
@@ -40469,8 +40506,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10t"],
-      "nextQuestIds": ["ss10z"]
+      "previousQuestIds": [
+        "ss10t"
+      ],
+      "nextQuestIds": [
+        "ss10z"
+      ]
     },
     {
       "id": "ss10x12",
@@ -40575,8 +40616,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x11"],
-      "nextQuestIds": ["ss10x13"]
+      "previousQuestIds": [
+        "ss10x11"
+      ],
+      "nextQuestIds": [
+        "ss10x13"
+      ]
     },
     {
       "id": "ss10h",
@@ -40793,8 +40838,13 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10e"],
-      "nextQuestIds": ["ss10i", "ss10j"]
+      "previousQuestIds": [
+        "ss10e"
+      ],
+      "nextQuestIds": [
+        "ss10i",
+        "ss10j"
+      ]
     },
     {
       "id": "ss10x18",
@@ -40957,8 +41007,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x16"],
-      "nextQuestIds": ["ss10x19"]
+      "previousQuestIds": [
+        "ss10x16"
+      ],
+      "nextQuestIds": [
+        "ss10x19"
+      ]
     },
     {
       "id": "ss10t",
@@ -41087,8 +41141,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10r"],
-      "nextQuestIds": ["ss10w"]
+      "previousQuestIds": [
+        "ss10r"
+      ],
+      "nextQuestIds": [
+        "ss10w"
+      ]
     },
     {
       "id": "ss2",
@@ -41177,8 +41235,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss1"],
-      "nextQuestIds": ["ss4"]
+      "previousQuestIds": [
+        "ss1"
+      ],
+      "nextQuestIds": [
+        "ss4"
+      ]
     },
     {
       "id": "12_cold_storage",
@@ -41279,8 +41341,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["12_in_my_image"],
-      "nextQuestIds": ["12_snap_and_salvage"]
+      "previousQuestIds": [
+        "12_in_my_image"
+      ],
+      "nextQuestIds": [
+        "12_snap_and_salvage"
+      ]
     },
     {
       "id": "ss11b2",
@@ -41429,7 +41495,9 @@
           "hr": "Pokreni antenski terminal blizu Crvenog tornja"
         }
       ],
-      "tips": ["The Battery is on the ground near a steel building"],
+      "tips": [
+        "The Battery is on the ground near a steel building"
+      ],
       "rewardItemIds": [
         {
           "itemId": "crimson_racer_aviator",
@@ -41445,7 +41513,10 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10y", "ss11b"],
+      "previousQuestIds": [
+        "ss10y",
+        "ss11b"
+      ],
       "nextQuestIds": []
     },
     {
@@ -41545,8 +41616,13 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x15"],
-      "nextQuestIds": ["ss10x17", "ss10x18"]
+      "previousQuestIds": [
+        "ss10x15"
+      ],
+      "nextQuestIds": [
+        "ss10x17",
+        "ss10x18"
+      ]
     },
     {
       "id": "ss10c",
@@ -41707,8 +41783,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10a"],
-      "nextQuestIds": ["ss10f"]
+      "previousQuestIds": [
+        "ss10a"
+      ],
+      "nextQuestIds": [
+        "ss10f"
+      ]
     },
     {
       "id": "ss10b",
@@ -41787,8 +41867,14 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10a", "ss9"],
-      "nextQuestIds": ["ss10d", "ss10e"]
+      "previousQuestIds": [
+        "ss10a",
+        "ss9"
+      ],
+      "nextQuestIds": [
+        "ss10d",
+        "ss10e"
+      ]
     },
     {
       "id": "ss6",
@@ -41893,8 +41979,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss5"],
-      "nextQuestIds": ["ss9"]
+      "previousQuestIds": [
+        "ss5"
+      ],
+      "nextQuestIds": [
+        "ss9"
+      ]
     },
     {
       "id": "ss10p",
@@ -42017,8 +42107,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10o"],
-      "nextQuestIds": ["ss10q"]
+      "previousQuestIds": [
+        "ss10o"
+      ],
+      "nextQuestIds": [
+        "ss10q"
+      ]
     },
     {
       "id": "ss10x13",
@@ -42117,8 +42211,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x12"],
-      "nextQuestIds": ["ss10x14"]
+      "previousQuestIds": [
+        "ss10x12"
+      ],
+      "nextQuestIds": [
+        "ss10x14"
+      ]
     },
     {
       "id": "ss10s",
@@ -42247,8 +42345,13 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10k"],
-      "nextQuestIds": ["ss10x", "ss10y"]
+      "previousQuestIds": [
+        "ss10k"
+      ],
+      "nextQuestIds": [
+        "ss10x",
+        "ss10y"
+      ]
     },
     {
       "id": "ss10m",
@@ -42353,8 +42456,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10l"],
-      "nextQuestIds": ["ss10n"]
+      "previousQuestIds": [
+        "ss10l"
+      ],
+      "nextQuestIds": [
+        "ss10n"
+      ]
     },
     {
       "id": "ss10x11",
@@ -42497,8 +42604,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x10"],
-      "nextQuestIds": ["ss10x12"]
+      "previousQuestIds": [
+        "ss10x10"
+      ],
+      "nextQuestIds": [
+        "ss10x12"
+      ]
     },
     {
       "id": "ss10a",
@@ -42627,8 +42738,13 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10"],
-      "nextQuestIds": ["ss10b", "ss10c"]
+      "previousQuestIds": [
+        "ss10"
+      ],
+      "nextQuestIds": [
+        "ss10b",
+        "ss10c"
+      ]
     },
     {
       "id": "ss5a",
@@ -42707,7 +42823,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss5"],
+      "previousQuestIds": [
+        "ss5"
+      ],
       "nextQuestIds": []
     },
     {
@@ -42943,7 +43061,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10m"],
+      "previousQuestIds": [
+        "ss10m"
+      ],
       "nextQuestIds": []
     },
     {
@@ -43057,7 +43177,10 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x4", "ss11b2"],
+      "previousQuestIds": [
+        "ss10x4",
+        "ss11b2"
+      ],
       "nextQuestIds": []
     },
     {
@@ -43181,8 +43304,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10j"],
-      "nextQuestIds": ["ss10p"]
+      "previousQuestIds": [
+        "ss10j"
+      ],
+      "nextQuestIds": [
+        "ss10p"
+      ]
     },
     {
       "id": "ss10x14",
@@ -43345,8 +43472,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x13"],
-      "nextQuestIds": ["ss10x15"]
+      "previousQuestIds": [
+        "ss10x13"
+      ],
+      "nextQuestIds": [
+        "ss10x15"
+      ]
     },
     {
       "id": "ss11b",
@@ -43467,8 +43598,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10z"],
-      "nextQuestIds": ["ss11b2"]
+      "previousQuestIds": [
+        "ss10z"
+      ],
+      "nextQuestIds": [
+        "ss11b2"
+      ]
     },
     {
       "id": "ss10i",
@@ -43587,8 +43722,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10h"],
-      "nextQuestIds": ["ss10l"]
+      "previousQuestIds": [
+        "ss10h"
+      ],
+      "nextQuestIds": [
+        "ss10l"
+      ]
     },
     {
       "id": "ss10l",
@@ -43691,8 +43830,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10i"],
-      "nextQuestIds": ["ss10m"]
+      "previousQuestIds": [
+        "ss10i"
+      ],
+      "nextQuestIds": [
+        "ss10m"
+      ]
     },
     {
       "id": "ss10f",
@@ -43815,8 +43958,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10c"],
-      "nextQuestIds": ["ss10g"]
+      "previousQuestIds": [
+        "ss10c"
+      ],
+      "nextQuestIds": [
+        "ss10g"
+      ]
     },
     {
       "id": "ss10d",
@@ -43931,7 +44078,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10b"],
+      "previousQuestIds": [
+        "ss10b"
+      ],
       "nextQuestIds": []
     },
     {
@@ -44011,8 +44160,13 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss2", "ss3"],
-      "nextQuestIds": ["ss5"]
+      "previousQuestIds": [
+        "ss2",
+        "ss3"
+      ],
+      "nextQuestIds": [
+        "ss5"
+      ]
     },
     {
       "id": "ss10z",
@@ -44136,8 +44290,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10w"],
-      "nextQuestIds": ["ss11b"]
+      "previousQuestIds": [
+        "ss10w"
+      ],
+      "nextQuestIds": [
+        "ss11b"
+      ]
     },
     {
       "id": "ss10v",
@@ -44252,7 +44410,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10r"],
+      "previousQuestIds": [
+        "ss10r"
+      ],
       "nextQuestIds": []
     },
     {
@@ -44353,7 +44513,10 @@
       ],
       "xp": 0,
       "previousQuestIds": [],
-      "nextQuestIds": ["ss2", "ss3"]
+      "nextQuestIds": [
+        "ss2",
+        "ss3"
+      ]
     },
     {
       "id": "ss10x10",
@@ -44500,8 +44663,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x9"],
-      "nextQuestIds": ["ss10x11"]
+      "previousQuestIds": [
+        "ss10x9"
+      ],
+      "nextQuestIds": [
+        "ss10x11"
+      ]
     },
     {
       "id": "ss10x9",
@@ -44620,8 +44787,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x8"],
-      "nextQuestIds": ["ss10x10"]
+      "previousQuestIds": [
+        "ss10x8"
+      ],
+      "nextQuestIds": [
+        "ss10x10"
+      ]
     },
     {
       "id": "ss11a",
@@ -44770,8 +44941,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss11"],
-      "nextQuestIds": ["ss11bx"]
+      "previousQuestIds": [
+        "ss11"
+      ],
+      "nextQuestIds": [
+        "ss11bx"
+      ]
     },
     {
       "id": "ss8",
@@ -44844,8 +45019,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss5"],
-      "nextQuestIds": ["ss8a"]
+      "previousQuestIds": [
+        "ss5"
+      ],
+      "nextQuestIds": [
+        "ss8a"
+      ]
     },
     {
       "id": "12_snap_and_salvage",
@@ -45003,7 +45182,9 @@
           "quantity": 1
         }
       ],
-      "previousQuestIds": ["12_cold_storage"],
+      "previousQuestIds": [
+        "12_cold_storage"
+      ],
       "nextQuestIds": []
     },
     {
@@ -45127,8 +45308,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x4"],
-      "nextQuestIds": ["ss10x7"]
+      "previousQuestIds": [
+        "ss10x4"
+      ],
+      "nextQuestIds": [
+        "ss10x7"
+      ]
     },
     {
       "id": "ss8b",
@@ -45221,7 +45406,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss8a"],
+      "previousQuestIds": [
+        "ss8a"
+      ],
       "nextQuestIds": []
     },
     {
@@ -45411,8 +45598,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10h"],
-      "nextQuestIds": ["ss10o"]
+      "previousQuestIds": [
+        "ss10h"
+      ],
+      "nextQuestIds": [
+        "ss10o"
+      ]
     },
     {
       "id": "ss10x7",
@@ -45515,8 +45706,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x6"],
-      "nextQuestIds": ["ss10x8"]
+      "previousQuestIds": [
+        "ss10x6"
+      ],
+      "nextQuestIds": [
+        "ss10x8"
+      ]
     },
     {
       "id": "ss10u",
@@ -45617,7 +45812,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10r"],
+      "previousQuestIds": [
+        "ss10r"
+      ],
       "nextQuestIds": []
     },
     {
@@ -45731,8 +45928,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss5"],
-      "nextQuestIds": ["ss10"]
+      "previousQuestIds": [
+        "ss5"
+      ],
+      "nextQuestIds": [
+        "ss10"
+      ]
     },
     {
       "id": "ss10x3",
@@ -45851,8 +46052,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x2"],
-      "nextQuestIds": ["ss10x4"]
+      "previousQuestIds": [
+        "ss10x2"
+      ],
+      "nextQuestIds": [
+        "ss10x4"
+      ]
     },
     {
       "id": "ss9",
@@ -46055,8 +46260,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss6"],
-      "nextQuestIds": ["ss10b"]
+      "previousQuestIds": [
+        "ss6"
+      ],
+      "nextQuestIds": [
+        "ss10b"
+      ]
     },
     {
       "id": "ss3",
@@ -46145,8 +46354,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss1"],
-      "nextQuestIds": ["ss4"]
+      "previousQuestIds": [
+        "ss1"
+      ],
+      "nextQuestIds": [
+        "ss4"
+      ]
     },
     {
       "id": "ss10x15",
@@ -46235,8 +46448,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x14"],
-      "nextQuestIds": ["ss10x16"]
+      "previousQuestIds": [
+        "ss10x14"
+      ],
+      "nextQuestIds": [
+        "ss10x16"
+      ]
     },
     {
       "id": "ss10x17",
@@ -46341,7 +46558,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x16"],
+      "previousQuestIds": [
+        "ss10x16"
+      ],
       "nextQuestIds": []
     },
     {
@@ -46535,8 +46754,13 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10p", "ss10n"],
-      "nextQuestIds": ["ss10r"]
+      "previousQuestIds": [
+        "ss10p",
+        "ss10n"
+      ],
+      "nextQuestIds": [
+        "ss10r"
+      ]
     },
     {
       "id": "ss10x2",
@@ -46659,8 +46883,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x"],
-      "nextQuestIds": ["ss10x3"]
+      "previousQuestIds": [
+        "ss10x"
+      ],
+      "nextQuestIds": [
+        "ss10x3"
+      ]
     },
     {
       "id": "ss10x4",
@@ -46783,8 +47011,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10x3"],
-      "nextQuestIds": ["ss10x6"]
+      "previousQuestIds": [
+        "ss10x3"
+      ],
+      "nextQuestIds": [
+        "ss10x6"
+      ]
     },
     {
       "id": "ss8a",
@@ -46873,8 +47105,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss8"],
-      "nextQuestIds": ["ss8b"]
+      "previousQuestIds": [
+        "ss8"
+      ],
+      "nextQuestIds": [
+        "ss8b"
+      ]
     },
     {
       "id": "ss10e",
@@ -46997,8 +47233,12 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss10b"],
-      "nextQuestIds": ["ss10h"]
+      "previousQuestIds": [
+        "ss10b"
+      ],
+      "nextQuestIds": [
+        "ss10h"
+      ]
     },
     {
       "id": "ss11bx",
@@ -47137,7 +47377,9 @@
         }
       ],
       "xp": 0,
-      "previousQuestIds": ["ss11a"],
+      "previousQuestIds": [
+        "ss11a"
+      ],
       "nextQuestIds": []
     }
   ],
@@ -47552,55 +47794,73 @@
         {
           "level": 2,
           "requirementItemIds": [],
-          "otherRequirements": ["5000 Coins"],
+          "otherRequirements": [
+            "5000 Coins"
+          ],
           "description": "+24 slots (88 total)"
         },
         {
           "level": 3,
           "requirementItemIds": [],
-          "otherRequirements": ["10000 Coins"],
+          "otherRequirements": [
+            "10000 Coins"
+          ],
           "description": "+24 slots (112 total)"
         },
         {
           "level": 4,
           "requirementItemIds": [],
-          "otherRequirements": ["15000 Coins"],
+          "otherRequirements": [
+            "15000 Coins"
+          ],
           "description": "+24 slots (136 total)"
         },
         {
           "level": 5,
           "requirementItemIds": [],
-          "otherRequirements": ["25000 Coins"],
+          "otherRequirements": [
+            "25000 Coins"
+          ],
           "description": "+24 slots (160 total)"
         },
         {
           "level": 6,
           "requirementItemIds": [],
-          "otherRequirements": ["40000 Coins"],
+          "otherRequirements": [
+            "40000 Coins"
+          ],
           "description": "+24 slots (184 total)"
         },
         {
           "level": 7,
           "requirementItemIds": [],
-          "otherRequirements": ["60000 Coins"],
+          "otherRequirements": [
+            "60000 Coins"
+          ],
           "description": "+24 slots (208 total)"
         },
         {
           "level": 8,
           "requirementItemIds": [],
-          "otherRequirements": ["90000 Coins"],
+          "otherRequirements": [
+            "90000 Coins"
+          ],
           "description": "+24 slots (232 total)"
         },
         {
           "level": 9,
           "requirementItemIds": [],
-          "otherRequirements": ["130000 Coins"],
+          "otherRequirements": [
+            "130000 Coins"
+          ],
           "description": "+24 slots (256 total)"
         },
         {
           "level": 10,
           "requirementItemIds": [],
-          "otherRequirements": ["200000 Coins"],
+          "otherRequirements": [
+            "200000 Coins"
+          ],
           "description": "+24 slots (280 total)"
         }
       ]

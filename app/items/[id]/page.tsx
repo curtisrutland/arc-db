@@ -48,115 +48,101 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
             <p className="text-zinc-600 dark:text-zinc-400 mb-6">{item.description.en}</p>
 
-            <div className="space-y-4">
-              <InfoGrid>
-                <InfoItem label="Type" value={item.type} />
-                <InfoItem label="Value" value={item.value} />
-                <InfoItem label="Weight" value={`${item.weightKg} kg`} />
-                <InfoItem label="Stack Size" value={item.stackSize} />
-              </InfoGrid>
+            <InfoGrid>
+              <InfoItem label="Type" value={item.type} />
+              <InfoItem label="Value" value={item.value} />
+              <InfoItem label="Weight" value={`${item.weightKg} kg`} />
+              <InfoItem label="Stack Size" value={item.stackSize} />
+            </InfoGrid>
 
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
               {item.recipe && (
-                <div className="mt-6">
-                  <InfoSection title="Recipe">
-                    <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
-                      {Object.entries(item.recipe).map(([itemId, quantity]) => (
-                        <li key={itemId}>
-                          {/* {itemId.replace(/_/g, " ")}: {quantity} */}
-                          <ItemLink itemId={itemId} />: {quantity}
-                        </li>
-                      ))}
-                    </ul>
-                    {item.craftBench && (
-                      <div className="text-sm text-zinc-500 dark:text-zinc-500 mt-2">
-                        Crafted at: <WorkstationLink workstationId={item.craftBench} />
-                      </div>
-                    )}
-                  </InfoSection>
-                </div>
+                <InfoSection title="Recipe">
+                  <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                    {Object.entries(item.recipe).map(([itemId, quantity]) => (
+                      <li key={itemId}>
+                        {/* {itemId.replace(/_/g, " ")}: {quantity} */}
+                        <ItemLink itemId={itemId} />: {quantity}
+                      </li>
+                    ))}
+                  </ul>
+                  {item.craftBench && (
+                    <div className="text-sm text-zinc-500 dark:text-zinc-500 mt-2">
+                      Crafted at: <WorkstationLink workstationId={item.craftBench} />
+                    </div>
+                  )}
+                </InfoSection>
               )}
 
               {item.effects && (
-                <div className="mt-6">
-                  <InfoSection title="Effects">
-                    <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
-                      {Object.entries(item.effects).map(([key, effect]) => (
-                        <li key={key}>
-                          {effect.en}: {effect.value}
-                        </li>
-                      ))}
-                    </ul>
-                  </InfoSection>
-                </div>
-              )}
-
-              {(craftedWith ?? []).length > 0 && (
-                <div className="mt-6">
-                  <InfoSection title="Ingredients For" variant="success">
-                    <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
-                      {craftedWith?.map((iid) => (
-                        <li key={iid}>
-                          <ItemLink itemId={iid} />
-                        </li>
-                      ))}
-                    </ul>
-                  </InfoSection>
-                </div>
-              )}
-
-              {(workstationUpgradeIds ?? []).length > 0 && (
-                <div className="mt-6">
-                  <InfoSection title="Workstations Upgraded By Item" variant="warning">
-                    <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
-                      {workstationUpgradeIds?.map((wsid) => (
-                        <li key={wsid}>
-                          <WorkstationLink workstationId={wsid} />
-                        </li>
-                      ))}
-                    </ul>
-                  </InfoSection>
-                </div>
-              )}
-
-              {(questIds ?? []).length > 0 && (
-                <div className="mt-6">
-                  <InfoSection title="Quests that Require this Item" variant="warning">
-                    <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
-                      {questIds?.map((questId) => (
-                        <li key={questId}>
-                          <QuestLink questId={questId} />
-                        </li>
-                      ))}
-                    </ul>
-                  </InfoSection>
-                </div>
-              )}
-
-              {(dropsFrom ?? []).length > 0 && (
-                <div className="mt-6">
-                  <InfoSection title="Drops from ARCs" variant="info">
-                    <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
-                      {dropsFrom?.map((arcId) => (
-                        <li key={arcId}>
-                          <BotLink botId={arcId} />
-                        </li>
-                      ))}
-                    </ul>
-                  </InfoSection>
-                </div>
-              )}
-
-              <div className="mt-6">
-                <InfoSection title="Recycles Into">
+                <InfoSection title="Effects">
                   <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
-                    {Object.entries(item.recyclesInto ?? {}).map(([resource, quantity]) => (
-                      <li key={resource}>
-                        <ItemLink itemId={resource} />: {quantity}
+                    {Object.entries(item.effects).map(([key, effect]) => (
+                      <li key={key}>
+                        {effect.en}: {effect.value}
                       </li>
                     ))}
                   </ul>
                 </InfoSection>
-              </div>
+              )}
+
+              {(craftedWith ?? []).length > 0 && (
+                <InfoSection title="Ingredients For" variant="success">
+                  <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                    {craftedWith?.map((iid) => (
+                      <li key={iid}>
+                        <ItemLink itemId={iid} />
+                      </li>
+                    ))}
+                  </ul>
+                </InfoSection>
+              )}
+
+              {(workstationUpgradeIds ?? []).length > 0 && (
+                <InfoSection title="Workstations Upgraded By Item" variant="warning">
+                  <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                    {workstationUpgradeIds?.map((wsid) => (
+                      <li key={wsid}>
+                        <WorkstationLink workstationId={wsid} />
+                      </li>
+                    ))}
+                  </ul>
+                </InfoSection>
+              )}
+
+              {(questIds ?? []).length > 0 && (
+                <InfoSection title="Quests that Require this Item" variant="warning">
+                  <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                    {questIds?.map((questId) => (
+                      <li key={questId}>
+                        <QuestLink questId={questId} />
+                      </li>
+                    ))}
+                  </ul>
+                </InfoSection>
+              )}
+
+              {(dropsFrom ?? []).length > 0 && (
+                <InfoSection title="Drops from ARCs" variant="info">
+                  <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                    {dropsFrom?.map((arcId) => (
+                      <li key={arcId}>
+                        <BotLink botId={arcId} />
+                      </li>
+                    ))}
+                  </ul>
+                </InfoSection>
+              )}
+
+              <InfoSection title="Recycles Into">
+                <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                  {Object.entries(item.recyclesInto ?? {}).map(([resource, quantity]) => (
+                    <li key={resource}>
+                      <ItemLink itemId={resource} />: {quantity}
+                    </li>
+                  ))}
+                </ul>
+              </InfoSection>
             </div>
 
             <p className="text-xs text-zinc-400 dark:text-zinc-600 mt-6">Last updated: {item.updatedAt}</p>

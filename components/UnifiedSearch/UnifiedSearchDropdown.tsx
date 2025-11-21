@@ -180,6 +180,7 @@ export function UnifiedSearchDropdown({
 
       {/* Desktop: Regular dropdown */}
       <div
+        ref={dropdownRef}
         className="hidden sm:block absolute top-full left-0 right-0 mt-2 bg-white dark:bg-zinc-900 rounded-lg shadow-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden z-50"
       >
       {/* Header */}

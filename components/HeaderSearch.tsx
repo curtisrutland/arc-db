@@ -23,6 +23,7 @@ export function HeaderSearch({
   const [searchTerm, setSearchTerm] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [entityType, setEntityType] = useState<EntityType>("items");
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const filteredResults = useMemo(() => {
     switch (entityType) {
@@ -77,7 +78,7 @@ export function HeaderSearch({
 
   const entityTypeConfig = {
     items: { label: "Items", placeholder: "Search items by name, type, rarity..." },
-    bots: { label: "Bots", placeholder: "Search bots by name, type, threat..." },
+    bots: { label: "ARCs", placeholder: "Search ARCs by name, type, threat..." },
     quests: { label: "Quests", placeholder: "Search quests by name, trader..." },
     workstations: {
       label: "Workstations",
@@ -95,7 +96,7 @@ export function HeaderSearch({
           className="h-full px-3 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 focus:border-transparent transition-all text-sm font-medium appearance-none pr-8 cursor-pointer"
         >
           <option value="items">Items</option>
-          <option value="bots">Bots</option>
+          <option value="bots">ARCs</option>
           <option value="quests">Quests</option>
           <option value="workstations">Workstations</option>
         </select>

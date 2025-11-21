@@ -31,7 +31,7 @@ export function BotsSearchableList({ bots }: BotsSearchableListProps) {
         searchTerm={searchTerm}
         onSearchChange={setSearchTerm}
         resultCount={filteredBots.length}
-        placeholder="Search bots by name, type, threat level..."
+        placeholder="Search ARCs by name, type, threat level..."
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -43,7 +43,7 @@ export function BotsSearchableList({ bots }: BotsSearchableListProps) {
       {filteredBots.length === 0 && (
         <div className="text-center py-12">
           <p className="text-zinc-500 dark:text-zinc-400 text-lg">
-            No bots found matching your search.
+            No ARCs found matching your search.
           </p>
         </div>
       )}

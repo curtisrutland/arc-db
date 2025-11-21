@@ -1,0 +1,32 @@
+# Prettier configuration
+# https://prettier.io/docs/en/configuration.html
+
+# Print semicolons at the ends of statements
+semi: true
+
+# Use single quotes instead of double quotes
+singleQuote: false
+
+# Print trailing commas wherever possible in multi-line comma-separated syntactic structures
+trailingComma: "es5"
+
+# Specify the number of spaces per indentation-level
+tabWidth: 2
+
+# Indent lines with tabs instead of spaces
+useTabs: false
+
+# Print width - wrap lines that exceed this length
+printWidth: 120
+
+# Specify the line ending style
+endOfLine: "lf"
+
+# Include parentheses around a sole arrow function parameter
+arrowParens: "always"
+
+# Put the > of a multi-line HTML (HTML, JSX, Vue, Angular) element at the end of the last line
+bracketSameLine: false
+
+# Control whether Prettier formats quoted code embedded in the file
+embeddedLanguageFormatting: "auto"

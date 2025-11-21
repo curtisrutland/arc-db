@@ -14,7 +14,7 @@ export default function Home() {
       color: "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800 hover:border-blue-300 dark:hover:border-blue-700",
     },
     {
-      title: "Bots",
+      title: "ARCs",
       description: "Explore enemy units, their weaknesses, drops, and locations",
       href: "/bots",
       icon: "🤖",
@@ -34,6 +34,13 @@ export default function Home() {
       icon: "🔨",
       color: "bg-amber-50 dark:bg-amber-900/20 border-amber-200 dark:border-amber-800 hover:border-amber-300 dark:hover:border-amber-700",
     },
+    {
+      title: "Maps",
+      description: "Discover all available maps and the ARCs found on each",
+      href: "/maps",
+      icon: "🗺️",
+      color: "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800 hover:border-purple-300 dark:hover:border-purple-700",
+    },
   ];
 
   return (
@@ -42,10 +49,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-5xl font-bold mb-4 text-zinc-900 dark:text-zinc-50">
-              ARC Raiders Database
+              ARCDb
             </h1>
             <p className="text-xl text-zinc-600 dark:text-zinc-400">
-              Your comprehensive guide to items, bots, quests, and workstations
+              A work-in-progress comprehensive database for Items, Quests, ARCs, and Workstations
             </p>
           </div>
 

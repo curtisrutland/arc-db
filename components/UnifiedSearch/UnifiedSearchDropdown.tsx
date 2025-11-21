@@ -119,7 +119,7 @@ export function UnifiedSearchDropdown({
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-3 p-4">
             {results.map((entity) => {
               if (isItem(entity)) {
                 return <ItemResultCard key={entity.id} item={entity} onClose={onClose} />;

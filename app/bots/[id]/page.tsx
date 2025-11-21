@@ -6,7 +6,7 @@ import { DetailPageContainer } from "@/components/DetailPageContainer";
 import { ThreatBadge } from "@/components/Badge";
 import { InfoSection } from "@/components/InfoSection";
 import { InfoGrid, InfoItem } from "@/components/InfoGrid";
-import { TagList } from "@/components/TagList";
+import { ItemLink, MapLink } from "@/components/Links";
 
 interface BotPageProps {
   params: Promise<{ id: string }>;
@@ -23,7 +23,7 @@ export default async function BotPage({ params }: BotPageProps) {
   return (
     <DetailPageContainer>
       <Breadcrumb
-        items={[{ label: "Bots", href: "/bots" }, { label: bot.name }]}
+        items={[{ label: "ARCs", href: "/bots" }, { label: bot.name }]}
       />
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
@@ -70,23 +70,29 @@ export default async function BotPage({ params }: BotPageProps) {
 
           <div className="mt-6">
             <InfoSection title="Drops">
-              <TagList
-                tags={bot.drops.map((drop) => ({
-                  id: drop,
-                  label: drop.replace(/_/g, " "),
-                }))}
-              />
+              <div className="flex flex-wrap gap-2">
+                {bot.drops.map((drop) => (
+                  <ItemLink
+                    key={drop}
+                    itemId={drop}
+                    className="px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-md text-sm text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                  />
+                ))}
+              </div>
             </InfoSection>
           </div>
 
           <div className="mt-6">
             <InfoSection title="Found On Maps">
-              <TagList
-                tags={bot.maps.map((map) => ({
-                  id: map,
-                  label: map.replace(/_/g, " "),
-                }))}
-              />
+              <div className="flex flex-wrap gap-2">
+                {bot.maps.map((map) => (
+                  <MapLink
+                    key={map}
+                    mapId={map}
+                    className="px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 rounded-md text-sm text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                  />
+                ))}
+              </div>
             </InfoSection>
           </div>
         </div>

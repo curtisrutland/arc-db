@@ -30,7 +30,7 @@ export interface LocalizedString {
 /**
  * Bot threat level
  */
-export type BotThreat = "Low" | "Medium" | "High" | "Critical";
+export type BotThreat = "Low" | "Moderate" | "High" | "Critical" | "Extreme";
 
 /**
  * Bot/enemy unit in the game
@@ -115,6 +115,7 @@ export interface Quest {
   trader: string;
   objectives: LocalizedString[];
   rewardItemIds: QuestRewardItem[];
+  requiredItemIds?: QuestRewardItem[];
   xp: number;
   previousQuestIds: string[];
   nextQuestIds: string[];
@@ -147,6 +148,15 @@ export interface Workstation {
 }
 
 /**
+ * Game map/location
+ */
+export interface Map {
+  id: string;
+  name: LocalizedString;
+  image: string;
+}
+
+/**
  * Complete game dataset structure
  */
 export interface GameDataset {
@@ -154,4 +164,5 @@ export interface GameDataset {
   items: Item[];
   quests: Quest[];
   workstations: Workstation[];
+  maps: Map[];
 }

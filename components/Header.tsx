@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { HeaderSearch } from "@/components/HeaderSearch";
+import { MobileMenu } from "@/components/MobileMenu";
 import { getItems, getBots, getQuests, getWorkstations } from "@/lib/dataset";
 
 export function Header() {
   const navLinks = [
     { href: "/items", label: "Items" },
-    { href: "/bots", label: "Bots" },
+    { href: "/bots", label: "ARCs" },
     { href: "/quests", label: "Quests" },
     { href: "/workstations", label: "Workstations" },
+    { href: "/maps", label: "Maps" },
   ];
 
   const items = getItems();
@@ -16,7 +18,7 @@ export function Header() {
   const workstations = getWorkstations();
 
   return (
-    <header className="bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
+    <header className="sticky top-0 z-40 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between gap-6">
           <Link
@@ -35,17 +37,7 @@ export function Header() {
             />
           </div>
 
-          <nav className="flex items-center gap-6">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors whitespace-nowrap"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <MobileMenu navLinks={navLinks} />
         </div>
       </div>
     </header>

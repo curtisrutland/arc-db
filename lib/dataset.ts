@@ -2,7 +2,7 @@
  * Utility functions for loading and working with the game dataset
  */
 
-import type { GameDataset, Bot, Item, Quest, Workstation } from "@/types/dataset";
+import type { GameDataset, Bot, Item, Quest, Workstation, Map } from "@/types/dataset";
 import datasetJson from "@/data/dataset.json";
 
 /**
@@ -85,4 +85,44 @@ export function getWorkstations(): Workstation[] {
  */
 export function getWorkstationById(id: string): Workstation | undefined {
   return dataset.workstations.find((station) => station.id === id);
+}
+
+export function getWorkstationsUpgradedByItemId(itemId: string): string[] {
+  const results: string[] = [];
+  for (const station of dataset.workstations) {
+    const upgradeItemIds = station.levels.flatMap((l) => l.requirementItemIds.map((r) => r.itemId));
+    if (upgradeItemIds.includes(itemId)) results.push(station.id);
+  }
+  return results;
+}
+
+export function getQuestsThatRequireItemId(itemId: string): string[] {
+  const results: string[] = [];
+  for (const quest of dataset.quests) {
+    const requiredItemIds = quest?.requiredItemIds?.flatMap((r) => r.itemId);
+    if (requiredItemIds?.includes(itemId)) results.push(quest.id);
+  }
+  return results;
+}
+
+/**
+ * Get all maps
+ */
+export function getMaps(): Map[] {
+  return dataset.maps;
+}
+
+/**
+ * Get a map by ID
+ */
+export function getMapById(id: string): Map | undefined {
+  return dataset.maps.find((map) => map.id === id);
+}
+
+export function getArcsThatDropItem(itemId: string): string[] {
+  const results: string[] = [];
+  for (const arc of dataset.bots) {
+    if (arc.drops.includes(itemId)) results.push(arc.id);
+  }
+  return results;
 }

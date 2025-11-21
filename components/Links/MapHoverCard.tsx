@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Map } from "@/types/dataset";
 import { MapImage } from "../Images/MapImage";
 

@@ -93,7 +93,7 @@ export interface Item {
   effects?: ItemEffect;
   updatedAt: string;
   recipe?: Recipe;
-  craftBench?: string;
+  craftBench?: string | string[];
   image: string;
 }
 

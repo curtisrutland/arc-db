@@ -3,7 +3,7 @@ import {
   getWorkstationsUpgradedByItemId,
   getQuestsThatRequireItemId,
   getArcsThatDropItem,
-  getItemsCraftedWithItem
+  getItemsCraftedWithItem,
 } from "@/lib/dataset";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -36,7 +36,12 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="grid md:grid-cols-2 gap-8 p-8">
-          <ItemImage item={item} size="lg" padding="p-8" className="aspect-square relative bg-zinc-100 dark:bg-zinc-800 rounded-lg" />
+          <ItemImage
+            item={item}
+            size="lg"
+            padding="p-8"
+            className="aspect-square relative bg-zinc-100 dark:bg-zinc-800 rounded-lg"
+          />
 
           <div>
             <div className="flex items-start justify-between mb-4">
@@ -66,7 +71,22 @@ export default async function ItemPage({ params }: ItemPageProps) {
                   </ul>
                   {item.craftBench && (
                     <div className="text-sm text-zinc-500 dark:text-zinc-500 mt-2">
-                      Crafted at: <WorkstationLink workstationId={item.craftBench} />
+                      {typeof item.craftBench === "string" ? (
+                        <>
+                          Crafted at: <WorkstationLink workstationId={item.craftBench} />
+                        </>
+                      ) : (
+                        <>
+                          Crafted at:
+                          <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                            {item.craftBench.map((wsid) => (
+                              <li key={wsid}>
+                                <WorkstationLink workstationId={wsid} />
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
                     </div>
                   )}
                 </InfoSection>

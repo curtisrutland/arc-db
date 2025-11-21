@@ -1,10 +1,10 @@
 import { getMapById, getBots } from "@/lib/dataset";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { DetailPageContainer } from "@/components/DetailPageContainer";
 import { InfoSection } from "@/components/InfoSection";
 import { BotCard } from "@/components/Cards/BotCard";
+import { MapImage } from "@/components/Images/MapImage";
 
 interface MapPageProps {
   params: Promise<{ id: string }>;
@@ -28,7 +28,8 @@ export default async function MapPage({ params }: MapPageProps) {
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="aspect-video relative bg-zinc-100 dark:bg-zinc-800">
-          <Image src={`/images${map.image}`} alt={map.name.en} fill className="object-cover" />
+          {/* <Image src={`/images${map.image}`} alt={map.name.en} fill className="object-cover" /> */}
+          <MapImage map={map} />
         </div>
 
         <div className="p-8">

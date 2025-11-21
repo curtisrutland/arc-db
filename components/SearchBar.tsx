@@ -1,60 +1,18 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
-
-interface SearchBarProps<T> {
-  items: T[];
-  searchKeys: (keyof T | string)[];
-  onFilter: (filteredItems: T[]) => void;
+interface SearchBarProps {
+  searchTerm: string;
+  onSearchChange: (term: string) => void;
+  resultCount: number;
   placeholder?: string;
 }
 
-export function SearchBar<T>({
-  items,
-  searchKeys,
-  onFilter,
+export function SearchBar({
+  searchTerm,
+  onSearchChange,
+  resultCount,
   placeholder = "Search...",
-}: SearchBarProps<T>) {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const filteredItems = useMemo(() => {
-    if (!searchTerm.trim()) {
-      return items;
-    }
-
-    const lowerSearchTerm = searchTerm.toLowerCase();
-
-    return items.filter((item) => {
-      return searchKeys.some((key) => {
-        const value = getNestedValue(item, key as string);
-        if (value === null || value === undefined) return false;
-
-        // Handle different value types
-        if (typeof value === "string") {
-          return value.toLowerCase().includes(lowerSearchTerm);
-        }
-        if (typeof value === "number") {
-          return value.toString().includes(lowerSearchTerm);
-        }
-        if (Array.isArray(value)) {
-          return value.some((v) =>
-            String(v).toLowerCase().includes(lowerSearchTerm)
-          );
-        }
-        // Handle objects with 'en' property (LocalizedString)
-        if (typeof value === "object" && value !== null && "en" in value) {
-          return String(value.en).toLowerCase().includes(lowerSearchTerm);
-        }
-
-        return false;
-      });
-    });
-  }, [items, searchKeys, searchTerm]);
-
-  // Update parent component with filtered results
-  useEffect(() => {
-    onFilter(filteredItems);
-  }, [filteredItems, onFilter]);
+}: SearchBarProps) {
 
   return (
     <div className="mb-6">
@@ -62,7 +20,7 @@ export function SearchBar<T>({
         <input
           type="text"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => onSearchChange(e.target.value)}
           placeholder={placeholder}
           className="w-full px-4 py-3 pl-12 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 focus:border-transparent transition-all"
         />
@@ -81,7 +39,7 @@ export function SearchBar<T>({
         </svg>
         {searchTerm && (
           <button
-            onClick={() => setSearchTerm("")}
+            onClick={() => onSearchChange("")}
             className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-600 dark:text-zinc-500 dark:hover:text-zinc-300 transition-colors"
             aria-label="Clear search"
           >
@@ -98,22 +56,9 @@ export function SearchBar<T>({
       </div>
       {searchTerm && (
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Found {filteredItems.length} result{filteredItems.length !== 1 ? "s" : ""}
+          Found {resultCount} result{resultCount !== 1 ? "s" : ""}
         </p>
       )}
     </div>
   );
-}
-
-// Helper function to get nested property values
-function getNestedValue(obj: any, path: string): any {
-  const keys = path.split(".");
-  let value = obj;
-
-  for (const key of keys) {
-    if (value === null || value === undefined) return null;
-    value = value[key];
-  }
-
-  return value;
 }

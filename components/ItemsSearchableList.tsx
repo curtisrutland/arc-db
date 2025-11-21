@@ -1,27 +1,35 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useMemo } from "react";
 import { Item } from "@/types/dataset";
 import { SearchBar } from "@/components/SearchBar";
 import { ItemCard } from "@/components/ItemCard";
+import { filterItems } from "@/lib/search";
 
 interface ItemsSearchableListProps {
   items: Item[];
 }
 
 export function ItemsSearchableList({ items }: ItemsSearchableListProps) {
-  const [filteredItems, setFilteredItems] = useState(items);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const handleFilter = useCallback((filtered: Item[]) => {
-    setFilteredItems(filtered);
-  }, []);
+  const filteredItems = useMemo(
+    () =>
+      filterItems(items, searchTerm, [
+        "name.en",
+        "description.en",
+        "type",
+        "rarity",
+      ]),
+    [items, searchTerm]
+  );
 
   return (
     <>
       <SearchBar
-        items={items}
-        searchKeys={["name.en", "description.en", "type", "rarity"]}
-        onFilter={handleFilter}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+        resultCount={filteredItems.length}
         placeholder="Search items by name, type, rarity..."
       />
 

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useMemo } from "react";
 import { Workstation } from "@/types/dataset";
 import { SearchBar } from "@/components/SearchBar";
 import { WorkstationCard } from "@/components/WorkstationCard";
+import { filterItems } from "@/lib/search";
 
 interface WorkstationsSearchableListProps {
   workstations: Workstation[];
@@ -12,19 +13,19 @@ interface WorkstationsSearchableListProps {
 export function WorkstationsSearchableList({
   workstations,
 }: WorkstationsSearchableListProps) {
-  const [filteredWorkstations, setFilteredWorkstations] =
-    useState(workstations);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const handleFilter = useCallback((filtered: Workstation[]) => {
-    setFilteredWorkstations(filtered);
-  }, []);
+  const filteredWorkstations = useMemo(
+    () => filterItems(workstations, searchTerm, ["name.en", "maxLevel"]),
+    [workstations, searchTerm]
+  );
 
   return (
     <>
       <SearchBar
-        items={workstations}
-        searchKeys={["name.en", "maxLevel"]}
-        onFilter={handleFilter}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+        resultCount={filteredWorkstations.length}
         placeholder="Search workstations by name..."
       />
 

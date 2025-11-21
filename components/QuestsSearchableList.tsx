@@ -1,20 +1,22 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useMemo } from "react";
 import { Quest } from "@/types/dataset";
 import { SearchBar } from "@/components/SearchBar";
 import { QuestCard } from "@/components/QuestCard";
+import { filterItems } from "@/lib/search";
 
 interface QuestsSearchableListProps {
   quests: Quest[];
 }
 
 export function QuestsSearchableList({ quests }: QuestsSearchableListProps) {
-  const [filteredQuests, setFilteredQuests] = useState(quests);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const handleFilter = useCallback((filtered: Quest[]) => {
-    setFilteredQuests(filtered);
-  }, []);
+  const filteredQuests = useMemo(
+    () => filterItems(quests, searchTerm, ["name.en", "trader", "objectives"]),
+    [quests, searchTerm]
+  );
 
   // Group quests by trader
   const questsByTrader = filteredQuests.reduce((acc, quest) => {
@@ -28,9 +30,9 @@ export function QuestsSearchableList({ quests }: QuestsSearchableListProps) {
   return (
     <>
       <SearchBar
-        items={quests}
-        searchKeys={["name.en", "trader", "objectives"]}
-        onFilter={handleFilter}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+        resultCount={filteredQuests.length}
         placeholder="Search quests by name, trader, objectives..."
       />
 

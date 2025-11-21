@@ -3,6 +3,7 @@ import {
   getWorkstationsUpgradedByItemId,
   getQuestsThatRequireItemId,
   getArcsThatDropItem,
+  getItemsCraftedWithItem
 } from "@/lib/dataset";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -23,6 +24,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
   const workstationUpgradeIds = getWorkstationsUpgradedByItemId(id);
   const questIds = getQuestsThatRequireItemId(id);
   const dropsFrom = getArcsThatDropItem(id);
+  const craftedWith = getItemsCraftedWithItem(id);
 
   if (!item) {
     notFound();
@@ -81,6 +83,20 @@ export default async function ItemPage({ params }: ItemPageProps) {
                       {Object.entries(item.effects).map(([key, effect]) => (
                         <li key={key}>
                           {effect.en}: {effect.value}
+                        </li>
+                      ))}
+                    </ul>
+                  </InfoSection>
+                </div>
+              )}
+
+              {(craftedWith ?? []).length > 0 && (
+                <div className="mt-6">
+                  <InfoSection title="Ingredients For" variant="success">
+                    <ul className="space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                      {craftedWith?.map((iid) => (
+                        <li key={iid}>
+                          <ItemLink itemId={iid} />
                         </li>
                       ))}
                     </ul>

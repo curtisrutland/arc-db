@@ -5,9 +5,14 @@ import { Item, Bot, Quest, Workstation } from "@/types/dataset";
 import { filterItems } from "@/lib/search";
 import { UnifiedSearchDropdown } from "@/components/UnifiedSearch";
 
-type EntityType = "items" | "bots" | "quests" | "workstations";
-
 interface HeaderSearchProps {
+  items: Item[];
+  bots: Bot[];
+  quests: Quest[];
+  workstations: Workstation[];
+}
+
+interface AllResults {
   items: Item[];
   bots: Bot[];
   quests: Quest[];
@@ -22,33 +27,25 @@ export function HeaderSearch({
 }: HeaderSearchProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [entityType, setEntityType] = useState<EntityType>("items");
-  const [isExpanded, setIsExpanded] = useState(false);
 
-  const filteredResults = useMemo(() => {
-    switch (entityType) {
-      case "items":
-        return filterItems(items, searchTerm, [
-          "name.en",
-          "description.en",
-          "type",
-          "rarity",
-        ]);
-      case "bots":
-        return filterItems(bots, searchTerm, [
-          "name",
-          "description",
-          "type",
-          "threat",
-        ]);
-      case "quests":
-        return filterItems(quests, searchTerm, ["name.en", "trader"]);
-      case "workstations":
-        return filterItems(workstations, searchTerm, ["name.en"]);
-      default:
-        return [];
-    }
-  }, [entityType, items, bots, quests, workstations, searchTerm]);
+  const allFilteredResults = useMemo((): AllResults => {
+    return {
+      items: filterItems(items, searchTerm, [
+        "name.en",
+        "description.en",
+        "type",
+        "rarity",
+      ]),
+      bots: filterItems(bots, searchTerm, [
+        "name",
+        "description",
+        "type",
+        "threat",
+      ]),
+      quests: filterItems(quests, searchTerm, ["name.en", "trader"]),
+      workstations: filterItems(workstations, searchTerm, ["name.en"]),
+    };
+  }, [items, bots, quests, workstations, searchTerm]);
 
   const handleSearchChange = useCallback((term: string) => {
     setSearchTerm(term);
@@ -70,59 +67,16 @@ export function HeaderSearch({
     }
   }, [searchTerm]);
 
-  const handleEntityTypeChange = useCallback((type: EntityType) => {
-    setEntityType(type);
-    setSearchTerm("");
-    setIsDropdownOpen(false);
-  }, []);
-
-  const entityTypeConfig = {
-    items: { label: "Items", placeholder: "Search items by name, type, rarity..." },
-    bots: { label: "ARCs", placeholder: "Search ARCs by name, type, threat..." },
-    quests: { label: "Quests", placeholder: "Search quests by name, trader..." },
-    workstations: {
-      label: "Workstations",
-      placeholder: "Search workstations by name...",
-    },
-  };
-
   return (
-    <div className="relative w-full flex gap-2">
-      {/* Entity Type Dropdown */}
-      <div className="relative">
-        <select
-          value={entityType}
-          onChange={(e) => handleEntityTypeChange(e.target.value as EntityType)}
-          className="h-full px-3 py-2 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 focus:border-transparent transition-all text-sm font-medium appearance-none pr-8 cursor-pointer"
-        >
-          <option value="items">Items</option>
-          <option value="bots">ARCs</option>
-          <option value="quests">Quests</option>
-          <option value="workstations">Workstations</option>
-        </select>
-        <svg
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 dark:text-zinc-500 pointer-events-none"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </div>
-
+    <div className="relative w-full">
       {/* Search Input */}
-      <div className="relative flex-1">
+      <div className="relative">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => handleSearchChange(e.target.value)}
           onFocus={handleFocus}
-          placeholder={entityTypeConfig[entityType].placeholder}
+          placeholder="Search items, ARCs, quests, workstations..."
           className="w-full px-4 py-2 pl-10 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50 placeholder-zinc-400 dark:placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 focus:border-transparent transition-all text-sm"
         />
         <svg
@@ -164,8 +118,7 @@ export function HeaderSearch({
           isOpen={isDropdownOpen}
           onClose={handleCloseDropdown}
           searchTerm={searchTerm}
-          results={filteredResults}
-          entityType={entityType}
+          allResults={allFilteredResults}
         />
       </div>
     </div>

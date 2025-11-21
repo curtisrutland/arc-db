@@ -126,3 +126,12 @@ export function getArcsThatDropItem(itemId: string): string[] {
   }
   return results;
 }
+
+export function getItemsCraftedWithItem(itemId: string): string[] {
+  const results: string[] = [];
+  for (const item of dataset.items) {
+    const recipeItems = Object.keys(item.recipe ?? {});
+    if (recipeItems.includes(itemId)) results.push(item.id);
+  }
+  return results;
+}

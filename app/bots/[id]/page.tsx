@@ -1,12 +1,12 @@
 import { getBotById } from "@/lib/dataset";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { DetailPageContainer } from "@/components/DetailPageContainer";
 import { ThreatBadge } from "@/components/Badge";
 import { InfoSection } from "@/components/InfoSection";
 import { InfoGrid, InfoItem } from "@/components/InfoGrid";
 import { ItemLink, MapLink } from "@/components/Links";
+import { BotImage } from "@/components/BotImage";
 
 interface BotPageProps {
   params: Promise<{ id: string }>;
@@ -27,14 +27,7 @@ export default async function BotPage({ params }: BotPageProps) {
       />
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
-        <div className="aspect-video relative bg-zinc-100 dark:bg-zinc-800">
-          <Image
-            src={`/images/${bot.image}`}
-            alt={bot.name}
-            fill
-            className="object-cover"
-          />
-        </div>
+        <BotImage bot={bot} size="lg" />
 
         <div className="p-8">
           <div className="flex items-start justify-between mb-4">

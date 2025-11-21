@@ -6,13 +6,13 @@ import {
   getItemsCraftedWithItem
 } from "@/lib/dataset";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { DetailPageContainer } from "@/components/DetailPageContainer";
 import { RarityBadge } from "@/components/Badge";
 import { InfoSection } from "@/components/InfoSection";
 import { InfoGrid, InfoItem } from "@/components/InfoGrid";
 import { BotLink, ItemLink, QuestLink, WorkstationLink } from "@/components/Links";
+import { ItemImage } from "@/components/ItemImage";
 
 interface ItemPageProps {
   params: Promise<{ id: string }>;
@@ -36,9 +36,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="grid md:grid-cols-2 gap-8 p-8">
-          <div className="aspect-square relative bg-zinc-100 dark:bg-zinc-800 rounded-lg">
-            <Image src={`/images/${item.image}`} alt={item.name.en} fill className="object-contain p-8" />
-          </div>
+          <ItemImage item={item} size="lg" padding="p-8" className="aspect-square relative bg-zinc-100 dark:bg-zinc-800 rounded-lg" />
 
           <div>
             <div className="flex items-start justify-between mb-4">

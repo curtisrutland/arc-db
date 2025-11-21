@@ -1,40 +1,16 @@
-import Image from "next/image";
 import { Item } from "@/types/dataset";
+import { ItemImage } from "@/components/ItemImage";
 
 interface ItemHoverCardProps {
   item: Item;
 }
 
-function isBlueprint(item: Item) {
-  return item.id.includes("blueprint");
-}
-
 export function ItemHoverCard({ item }: ItemHoverCardProps) {
-  const blueprint = isBlueprint(item);
-
   return (
     <div className="absolute left-0 top-full mt-2 z-50 w-80 pointer-events-none">
       <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="flex gap-3 p-3">
-          <div
-            className="w-16 h-16 flex-shrink-0 relative bg-zinc-100 dark:bg-zinc-800 rounded"
-            style={
-              blueprint
-                ? {
-                    backgroundImage: "url(/images/blueprint_bg.png)",
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }
-                : undefined
-            }
-          >
-            <Image
-              src={`/images/${item.image}`}
-              alt={item.name.en}
-              fill
-              className="object-contain p-1"
-            />
-          </div>
+          <ItemImage item={item} size="sm" padding="p-1" className="w-16 h-16 flex-shrink-0 relative bg-zinc-100 dark:bg-zinc-800 rounded" />
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-sm text-zinc-900 dark:text-zinc-50 truncate">
               {item.name.en}

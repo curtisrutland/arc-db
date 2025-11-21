@@ -1,42 +1,18 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { Item } from "@/types/dataset";
+import { ItemImage } from "@/components/ItemImage";
 
 interface ItemCardProps {
   item: Item;
 }
 
-function isBlueprint(item: Item) {
-  return item.id.includes("blueprint");
-}
-
 export function ItemCard({ item }: ItemCardProps) {
-  const blueprint = isBlueprint(item);
-
   return (
     <Link
       href={`/items/${item.id}`}
       className="block p-4 bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors"
     >
-      <div
-        className="aspect-square relative mb-3 bg-zinc-100 dark:bg-zinc-800 rounded"
-        style={
-          blueprint
-            ? {
-                backgroundImage: "url(/images/blueprint_bg.png)",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }
-            : undefined
-        }
-      >
-        <Image
-          src={`/images/${item.image}`}
-          alt={item.name.en}
-          fill
-          className="object-contain p-2"
-        />
-      </div>
+      <ItemImage item={item} className="aspect-square relative mb-3 bg-zinc-100 dark:bg-zinc-800 rounded" />
       <h2 className="font-semibold text-lg mb-1 text-zinc-900 dark:text-zinc-50">
         {item.name.en}
       </h2>

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Bot } from "@/types/dataset";
+import { BotImage } from "@/components/BotImage";
 
 interface BotHoverCardProps {
   bot: Bot;
@@ -10,14 +10,7 @@ export function BotHoverCard({ bot }: BotHoverCardProps) {
     <div className="absolute left-0 top-full mt-2 z-50 w-80 pointer-events-none">
       <div className="bg-white dark:bg-zinc-900 rounded-lg shadow-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="flex gap-3 p-3">
-          <div className="w-16 h-16 flex-shrink-0 relative bg-zinc-100 dark:bg-zinc-800 rounded">
-            <Image
-              src={`/images/${bot.image}`}
-              alt={bot.name}
-              fill
-              className="object-cover rounded"
-            />
-          </div>
+          <BotImage bot={bot} size="sm" className="w-16 h-16 flex-shrink-0 relative bg-zinc-100 dark:bg-zinc-800 rounded" />
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-sm text-zinc-900 dark:text-zinc-50 truncate">
               {bot.name}

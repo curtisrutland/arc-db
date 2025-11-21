@@ -3,7 +3,7 @@
 import { useState, useMemo, useCallback } from "react";
 import { Item, Bot, Quest, Workstation } from "@/types/dataset";
 import { filterItems } from "@/lib/search";
-import { UnifiedSearchDropdown } from "@/components/UnifiedSearchDropdown";
+import { UnifiedSearchDropdown } from "@/components/UnifiedSearch";
 
 type EntityType = "items" | "bots" | "quests" | "workstations";
 

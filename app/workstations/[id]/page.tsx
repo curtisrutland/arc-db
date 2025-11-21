@@ -1,6 +1,6 @@
 import { getWorkstationById } from "@/lib/dataset";
 import { notFound } from "next/navigation";
-import { BackLink } from "@/components/BackLink";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { DetailPageContainer } from "@/components/DetailPageContainer";
 import { LevelBadge } from "@/components/Badge";
 
@@ -20,7 +20,12 @@ export default async function WorkstationPage({
 
   return (
     <DetailPageContainer>
-      <BackLink href="/workstations" label="Back to Workstations" />
+      <Breadcrumb
+        items={[
+          { label: "Workstations", href: "/workstations" },
+          { label: station.name.en },
+        ]}
+      />
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="p-8">

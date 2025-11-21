@@ -1,7 +1,7 @@
 import { getBotById } from "@/lib/dataset";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { BackLink } from "@/components/BackLink";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { DetailPageContainer } from "@/components/DetailPageContainer";
 import { ThreatBadge } from "@/components/Badge";
 import { InfoSection } from "@/components/InfoSection";
@@ -22,7 +22,9 @@ export default async function BotPage({ params }: BotPageProps) {
 
   return (
     <DetailPageContainer>
-      <BackLink href="/bots" label="Back to Bots" />
+      <Breadcrumb
+        items={[{ label: "Bots", href: "/bots" }, { label: bot.name }]}
+      />
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="aspect-video relative bg-zinc-100 dark:bg-zinc-800">

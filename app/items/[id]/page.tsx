@@ -1,7 +1,7 @@
 import { getItemById } from "@/lib/dataset";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { BackLink } from "@/components/BackLink";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { DetailPageContainer } from "@/components/DetailPageContainer";
 import { RarityBadge } from "@/components/Badge";
 import { InfoSection } from "@/components/InfoSection";
@@ -21,7 +21,9 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
   return (
     <DetailPageContainer>
-      <BackLink href="/items" label="Back to Items" />
+      <Breadcrumb
+        items={[{ label: "Items", href: "/items" }, { label: item.name.en }]}
+      />
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="grid md:grid-cols-2 gap-8 p-8">

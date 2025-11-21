@@ -1,6 +1,6 @@
 import { getQuestById } from "@/lib/dataset";
 import { notFound } from "next/navigation";
-import { BackLink } from "@/components/BackLink";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { DetailPageContainer } from "@/components/DetailPageContainer";
 import { XPBadge } from "@/components/Badge";
 import { InfoSection } from "@/components/InfoSection";
@@ -20,7 +20,12 @@ export default async function QuestPage({ params }: QuestPageProps) {
 
   return (
     <DetailPageContainer>
-      <BackLink href="/quests" label="Back to Quests" />
+      <Breadcrumb
+        items={[
+          { label: "Quests", href: "/quests" },
+          { label: quest.name.en },
+        ]}
+      />
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
         <div className="p-8">

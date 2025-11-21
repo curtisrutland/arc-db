@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "ARCDb - ARC Raiders Database",
+};
+
 export default function Home() {
   const entities = [
     {
@@ -45,7 +49,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
             {entities.map((entity) => (
               <Link
                 key={entity.href}
@@ -62,6 +66,19 @@ export default function Home() {
               </Link>
             ))}
           </div>
+
+          <footer className="text-center pt-8 border-t border-zinc-200 dark:border-zinc-800">
+            <p className="text-sm text-zinc-500 dark:text-zinc-500">
+              <Link
+                href="/attributions"
+                className="hover:text-zinc-700 dark:hover:text-zinc-300 underline"
+              >
+                Data Attributions
+              </Link>
+              {" · "}
+              Unofficial fan-made database for ARC Raiders
+            </p>
+          </footer>
         </div>
       </div>
     </div>

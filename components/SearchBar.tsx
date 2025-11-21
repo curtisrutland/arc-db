@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 interface SearchBarProps<T> {
   items: T[];
@@ -52,7 +52,7 @@ export function SearchBar<T>({
   }, [items, searchKeys, searchTerm]);
 
   // Update parent component with filtered results
-  useMemo(() => {
+  useEffect(() => {
     onFilter(filteredItems);
   }, [filteredItems, onFilter]);
 

@@ -78,7 +78,7 @@ export function UnifiedSearchDropdown({
         ref={dropdownRef}
         className="sm:hidden fixed left-0 right-0 top-[calc(100vh-100vh+theme(spacing.32))] bottom-0 bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 overflow-hidden z-50"
         style={{
-          top: '64px',
+          top: '66px',
         }}
       >
         {/* Header */}

@@ -28,6 +28,9 @@ export function getBotById(id: string): Bot | undefined {
  * Get all items
  */
 export function getItems(): Item[] {
+  if (process.env.NEXT_PUBLIC_HIDE_COSMETICS === "true") {
+    return dataset.items.filter((item) => item.type !== "Cosmetic");
+  }
   return dataset.items;
 }
 

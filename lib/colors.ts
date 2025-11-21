@@ -1,7 +1,7 @@
-import type { ItemRarity } from "@/types/dataset";
+import type { ItemRarity, BotThreat } from "@/types/dataset";
 
 /**
- * Centralized color constants for item rarities
+ * Centralized color constants for item rarities and bot threats
  * Ensures consistency across all components (badges, gradients, etc.)
  */
 
@@ -56,4 +56,24 @@ export function getRarityGradient(rarity: ItemRarity): string {
  */
 export function getRarityBadgeClasses(rarity: ItemRarity): string {
   return RARITY_BADGE_CLASSES[rarity];
+}
+
+/**
+ * Tailwind CSS classes for threat level badges
+ */
+export const THREAT_BADGE_CLASSES = {
+  Extreme: "bg-fuchsia-100 text-fuchsia-700 dark:bg-fuchsia-900/30 dark:text-fuchsia-400",
+  Critical: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",
+  High: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400",
+  Moderate: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400",
+  Low: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
+} as const;
+
+/**
+ * Get the Tailwind CSS classes for a threat level badge
+ * @param threat - The bot threat level
+ * @returns Space-separated CSS class string
+ */
+export function getThreatBadgeClasses(threat: BotThreat): string {
+  return THREAT_BADGE_CLASSES[threat];
 }

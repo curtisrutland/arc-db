@@ -19,7 +19,7 @@ export function InfoGrid({ children, columns = 2 }: InfoGridProps) {
 
 interface InfoItemProps {
   label: string;
-  value: string | number;
+  value: ReactNode;
 }
 
 export function InfoItem({ label, value }: InfoItemProps) {

@@ -2,7 +2,7 @@
   "bots": [
     {
       "id": "arc_surveyor",
-      "name": "ARC SURVEYOR",
+      "name": "Arc Surveyor",
       "image": "bots/arc_surveyor.png",
       "type": "Reconnaissance",
       "threat": "Low",
@@ -26,7 +26,7 @@
     },
     {
       "id": "bastion",
-      "name": "BASTION",
+      "name": "Bastion",
       "image": "bots/arc_bastion.png",
       "type": "Heavy Assault",
       "threat": "Critical",
@@ -52,7 +52,7 @@
     },
     {
       "id": "bombardier",
-      "name": "BOMBARDIER",
+      "name": "Bombardier",
       "image": "bots/arc_bombardier.png",
       "type": "Heavy Artillery",
       "threat": "Critical",
@@ -75,7 +75,7 @@
     },
     {
       "id": "fireball",
-      "name": "FIREBALL",
+      "name": "Fireball",
       "image": "bots/arc_fireball.png",
       "type": "Area Denial",
       "threat": "High",
@@ -99,7 +99,7 @@
     },
     {
       "id": "hornet",
-      "name": "HORNET",
+      "name": "Hornet",
       "image": "bots/arc_hornet.png",
       "type": "Medium Drone",
       "threat": "High",
@@ -123,7 +123,7 @@
     },
     {
       "id": "leaper",
-      "name": "LEAPER",
+      "name": "Leaper",
       "image": "bots/arc_bison.png",
       "type": "Siege Engine",
       "threat": "Critical",
@@ -147,7 +147,7 @@
     },
     {
       "id": "pop",
-      "name": "POP",
+      "name": "Pop",
       "image": "bots/arc_pop.png",
       "type": "Explosive",
       "threat": "Moderate",
@@ -173,7 +173,7 @@
     },
     {
       "id": "rocketeer",
-      "name": "ROCKETEER",
+      "name": "Rocketeer",
       "image": "bots/arc_rocketeer.png",
       "type": "Flying Artillery",
       "threat": "Critical",
@@ -200,7 +200,7 @@
     },
     {
       "id": "sentinel",
-      "name": "SENTINEL",
+      "name": "Sentinel",
       "image": "bots/arc_sentinel.png",
       "type": "Sniper Turret",
       "threat": "High",
@@ -227,7 +227,7 @@
     },
     {
       "id": "snitch",
-      "name": "SNITCH",
+      "name": "Snitch",
       "image": "bots/arc_snitch.png",
       "type": "Scout Drone",
       "threat": "Moderate",
@@ -251,7 +251,7 @@
     },
     {
       "id": "spotter",
-      "name": "SPOTTER",
+      "name": "Spotter",
       "image": "bots/arc_spotter.png",
       "type": "Scout Drone",
       "threat": "High",
@@ -274,7 +274,7 @@
     },
     {
       "id": "the_queen",
-      "name": "THE QUEEN",
+      "name": "The Queen",
       "image": "bots/arc_the_queen.png",
       "type": "Boss",
       "threat": "Extreme",
@@ -306,7 +306,7 @@
     },
     {
       "id": "tick",
-      "name": "TICK",
+      "name": "Tick",
       "image": "bots/arc_tick.png",
       "type": "Ambush Predator",
       "threat": "Moderate",
@@ -329,7 +329,7 @@
     },
     {
       "id": "turret",
-      "name": "TURRET",
+      "name": "Turret",
       "image": "bots/arc_turret.png",
       "type": "Defense System",
       "threat": "Moderate",
@@ -353,7 +353,7 @@
     },
     {
       "id": "wasp",
-      "name": "WASP",
+      "name": "Wasp",
       "image": "bots/arc_wasp.png",
       "type": "Flying Drone",
       "threat": "Moderate",
@@ -376,7 +376,7 @@
     },
     {
       "id": "matriarch",
-      "name": "MATRIARCH",
+      "name": "Matriarch",
       "image": "bots/arc_matriarch.png",
       "type": "Queen of Queen's",
       "threat": "Extreme",
@@ -400,7 +400,7 @@
     },
     {
       "id": "shredder",
-      "name": "SHREDDER",
+      "name": "Shredder",
       "image": "bots/arc_shredder.png",
       "type": "Close quaters predator",
       "threat": "High",
@@ -6134,7 +6134,8 @@
       "rarity": "Rare",
       "value": 100,
       "recyclesInto": {},
-      "updatedAt": "10/30/2025"
+      "updatedAt": "10/30/2025",
+      "image": "items/buried_city_key.png"
     },
     {
       "id": "buried_city_residential_master_key",
@@ -6604,55 +6605,6 @@
       },
       "updatedAt": "10/30/2025",
       "image": "items/burletta.png"
-    },
-    {
-      "id": "burned_arc_circuit",
-      "name": {
-        "en": "Burned Arc Circuit",
-        "de": "Verbrannter Arc-Schaltkreis",
-        "fr": "Circuit Arc brûlé",
-        "es": "Circuito Arc quemado",
-        "pt": "Circuito Arc queimado",
-        "pl": "Spalony obwód Arc",
-        "no": "Brent Arc-krets",
-        "da": "Brændt Arc-kredsløb",
-        "it": "Circuito Arc bruciato",
-        "ja": "焼損したアークサーキット",
-        "kr": "타버린 아크 회로",
-        "zh-CN": "烧毁的电弧电路",
-        "zh-TW": "燒毀的電弧電路",
-        "ru": "Сгоревшая Arc-схема",
-        "tr": "Yanmış Arc Devresi",
-        "uk": "Згоріла Arc-схема",
-        "sr": "Izgorela Arc struja",
-        "hr": "Izgoreli Arc sklop"
-      },
-      "description": {
-        "en": "Can be recycled into crafting materials.",
-        "de": "Kann zu Handwerksmaterialien recycelt werden.",
-        "fr": "Peut être recyclé en matériaux de fabrication.",
-        "es": "Puede reciclarse en materiales de fabricación.",
-        "pt": "Pode ser reciclado em materiais de fabricação.",
-        "pl": "Można przetworzyć na materiały rzemieślnicze.",
-        "no": "Kan resirkuleres til håndverksmaterialer.",
-        "da": "Kan genbruges til håndværksmaterialer.",
-        "it": "Può essere riciclato in materiali da crafting.",
-        "ja": "クラフト素材にリサイクルできます。",
-        "kr": "제작 재료로 재활용할 수 있습니다.",
-        "zh-CN": "可以回收为制作材料。",
-        "zh-TW": "可以回收為製作材料。",
-        "ru": "Можно переработать в материалы для крафта.",
-        "tr": "İşleme malzemelerine geri dönüştürülebilir.",
-        "uk": "Можна переробити на матеріали для крафту.",
-        "sr": "Može se reciklirati u materijale za izradu.",
-        "hr": "Može se reciklirati u materijale za izradu."
-      },
-      "type": "Recyclable",
-      "rarity": "Uncommon",
-      "weightKg": 1,
-      "foundIn": "ARC",
-      "updatedAt": "11/04/2025",
-      "image": "items/burned_arc_circuit.png"
     },
     {
       "id": "burned_arc_circuitry",
@@ -9165,56 +9117,6 @@
       "foundIn": "ARC",
       "updatedAt": "10/30/2025",
       "image": "items/damaged_tick_pod.png"
-    },
-    {
-      "id": "damaged_wasp_drive",
-      "name": {
-        "en": "Damaged Wasp Drive",
-        "de": "Beschädigter Wespen-Antrieb",
-        "fr": "Propulseur Wasp endommagé",
-        "es": "Propulsor Wasp dañado",
-        "pt": "Propulsor Wasp danificado",
-        "pl": "Uszkodzony napęd Wasp",
-        "no": "Skadet Wasp-drift",
-        "da": "Beskadiget Wasp-drev",
-        "it": "Propulsore Wasp danneggiato",
-        "ja": "破損したワスプドライブ",
-        "kr": "손상된 와스프 드라이브",
-        "zh-CN": "损坏的黄蜂驱动器",
-        "zh-TW": "損壞的黃蜂驅動器",
-        "ru": "Поврежденный привод Wasp",
-        "tr": "Hasarlı Wasp Sürücüsü",
-        "uk": "Пошкоджений привід Wasp",
-        "sr": "Oštećeni Wasp pogon",
-        "hr": "Oštećeni Wasp pogon"
-      },
-      "description": {
-        "en": "Can be recycled into crafting materials.",
-        "de": "Kann zu Handwerksmaterialien recycelt werden.",
-        "fr": "Peut être recyclé en matériaux de fabrication.",
-        "es": "Puede reciclarse en materiales de fabricación.",
-        "pt": "Pode ser reciclado em materiais de fabricação.",
-        "pl": "Można przetworzyć na materiały rzemieślnicze.",
-        "no": "Kan resirkuleres til håndverksmateriell.",
-        "da": "Kan genbruges til håndværksmaterialer.",
-        "it": "Può essere riciclato in materiali da crafting.",
-        "ja": "クラフト素材にリサイクルできます。",
-        "kr": "제작 재료로 재활용할 수 있습니다.",
-        "zh-CN": "可回收为制作材料。",
-        "zh-TW": "可回收為製作材料。",
-        "ru": "Можно переработать в материалы для крафта.",
-        "tr": "Üretim malzemelerine geri dönüştürülebilir.",
-        "uk": "Можна переробити на матеріали для крафту.",
-        "sr": "Može se reciklirati u materijale za izradu.",
-        "hr": "Može se reciklirati u materijale za izradu."
-      },
-      "type": "Recyclable",
-      "rarity": "Common",
-      "weightKg": 0.25,
-      "stackSize": 3,
-      "foundIn": "ARC",
-      "updatedAt": "11/04/2025",
-      "image": "items/damaged_wasp_drive.png"
     },
     {
       "id": "damaged_wasp_driver",
@@ -22551,7 +22453,8 @@
       "weightKg": 0.4,
       "stackSize": 3,
       "foundIn": "Old World, Residential, Commercial",
-      "updatedAt": "11/03/2025"
+      "updatedAt": "11/03/2025",
+      "image": "items/music_box.png"
     },
     {
       "id": "muzzle_brake_i",
@@ -31717,7 +31620,8 @@
           "value": "Stella Montis"
         }
       },
-      "updatedAt": "11/13/2025"
+      "updatedAt": "11/13/2025",
+      "image": "items/stella_montis_key.png"
     },
     {
       "name": {
@@ -31839,7 +31743,7 @@
         }
       },
       "updatedAt": "11/13/2025",
-      "image": "items/stella_montis_medical_storage_key.png"
+      "image": "items/stella_montis_key.png"
     },
     {
       "name": {

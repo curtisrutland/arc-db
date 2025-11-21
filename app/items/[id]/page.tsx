@@ -13,6 +13,8 @@ import { InfoSection } from "@/components/InfoSection";
 import { InfoGrid, InfoItem } from "@/components/InfoGrid";
 import { BotLink, ItemLink, QuestLink, WorkstationLink } from "@/components/Links";
 import { ItemImage } from "@/components/Images/ItemImage";
+import Image from "next/image";
+import Coin from "./Coin";
 
 interface ItemPageProps {
   params: Promise<{ id: string }>;
@@ -53,7 +55,15 @@ export default async function ItemPage({ params }: ItemPageProps) {
 
             <InfoGrid>
               <InfoItem label="Type" value={item.type} />
-              <InfoItem label="Value" value={item.value} />
+              <InfoItem
+                label="Value"
+                value={
+                  <span className="flex items-center gap-1">
+                    <Coin />
+                    {item.value.toLocaleString("en-US", { maximumFractionDigits: 0 })}
+                  </span>
+                }
+              />
               <InfoItem label="Weight" value={`${item.weightKg} kg`} />
               <InfoItem label="Stack Size" value={item.stackSize} />
             </InfoGrid>

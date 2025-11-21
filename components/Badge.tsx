@@ -1,20 +1,12 @@
 import type { BotThreat, ItemRarity } from "@/types/dataset";
-import { getRarityBadgeClasses } from "@/lib/colors";
+import { getRarityBadgeClasses, getThreatBadgeClasses } from "@/lib/colors";
 
 interface ThreatBadgeProps {
   threat: BotThreat;
 }
 
-const THREAT_BADGE_CLASSES = {
-  Extreme: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",
-  Critical: "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400",
-  High: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400",
-  Moderate: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400",
-  Low: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
-} as const;
-
 export function ThreatBadge({ threat }: ThreatBadgeProps) {
-  return <span className={`px-4 py-2 rounded font-medium ${THREAT_BADGE_CLASSES[threat]}`}>{threat} Threat</span>;
+  return <span className={`px-4 py-2 rounded font-medium ${getThreatBadgeClasses(threat)}`}>{threat} Threat</span>;
 }
 
 interface RarityBadgeProps {

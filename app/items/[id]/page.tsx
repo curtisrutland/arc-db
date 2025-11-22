@@ -13,8 +13,7 @@ import { InfoSection } from "@/components/InfoSection";
 import { InfoGrid, InfoItem } from "@/components/InfoGrid";
 import { BotLink, ItemLink, QuestLink, WorkstationLink } from "@/components/Links";
 import { ItemImage } from "@/components/Images/ItemImage";
-import Image from "next/image";
-import Coin from "./Coin";
+import { Coin } from "./Coin";
 
 interface ItemPageProps {
   params: Promise<{ id: string }>;
@@ -37,7 +36,7 @@ export default async function ItemPage({ params }: ItemPageProps) {
       <Breadcrumb items={[{ label: "Items", href: "/items" }, { label: item.name.en }]} />
 
       <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 overflow-hidden">
-        <div className="grid md:grid-cols-2 gap-8 p-8">
+        <div className="grid xl:grid-cols-2 gap-8 p-8">
           <ItemImage
             item={item}
             size="lg"

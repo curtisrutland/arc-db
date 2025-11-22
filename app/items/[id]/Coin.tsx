@@ -2,7 +2,7 @@ interface CoinProps {
   size?: number;
 }
 
-export default function Coin({ size }: CoinProps) {
+export function Coin({ size }: CoinProps) {
   return (
     <svg width={size ?? 16} height={size ?? 16} xmlns="http://www.w3.org/2000/svg">
       <symbol id="a" viewBox="0 0 256 256" fill="currentColor" stroke="currentColor">
